@@ -1,0 +1,263 @@
+.ellipse-lg {
+    position: absolute;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    top: -128px;
+    left: -128px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    background: #e5e5e5;
+}
+
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: ease;
+}
+
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce-2 {
+    0%      { transform: translateY(0); }
+    50%     { transform: translateY(25px); }
+    100%    { transform: translateY(0);}
+}
+
+@keyframes bounce-1 {
+    0%      { transform: translateY(0); }
+    50%     {transform: translateY(-25px); }
+    100%    { transform: translateY(0); }
+}
+
+.ellipse-lg-md-1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 51px;
+    height: 51px;
+    left: 114px;
+    top: 48px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    background: #e9e9ed;
+}
+
+.ellipse-lg-md-2 {
+    position: absolute;
+    border-radius: 50%;
+    width: 51px;
+    height: 51px;
+    left: 233px;
+    top: 63px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    background: #e9e9ed;
+}
+
+.ellipse-dg-md-1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 41px;
+    top: 124px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    background: #727272;
+}
+
+.ellipse-dg-md-2 {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: 223px;
+    top: 53px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    background: #727272;
+}
+
+.ellipse-dg-sm-1 {
+    position: absolute;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    left: 154px;
+    top: 51px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    background: #727272;
+}
+
+h1 {
+    position: relative;
+    width: 325px;
+    height: 109px;
+    top: 177px;
+    left: 25px;
+
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    text-align: center;
+
+    color: black;
+}
+
+.div1 {
+    position: absolute;
+    width: 382px;
+    height: 44px;
+    left: 75px;
+    top: 286px;
+
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #a8a6a7;
+}
+
+.signin-input-email {
+    position: absolute;
+    width: 342px;
+    height: 44px;
+    left: 45px;
+    top: 507px;
+
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    border-bottom: 1px solid #A8A6A7;
+
+    color: #a8a6a7;
+
+}
+
+.signin-input-password {
+    position: absolute;
+    width: 342px;
+    height: 44px;
+    left: 45px;
+    top: 551px;
+
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    border-bottom: 1px solid #A8A6A7;
+    border-top: 1px solid #A8A6A7;
+
+    color: #a8a6a7;
+
+}
+
+.btn-action {
+    position: absolute;
+    width: 350px;
+    height: 44px;
+    left: 14px;
+    top: 630px;
+    background: #222222;
+    border-radius: 20px;
+    color: white;
+
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.inactive_usr {
+    position: absolute;
+    width: 382px;
+    height: 44px;
+    left: 65px;
+    top: 700px;
+
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.signin-options {
+    position: absolute;
+    left: 44.27%;
+    right: 45.11%;
+    top: 79.81%;
+    bottom: 15.17%;
+}
+
+.div2 {
+    position: absolute;
+    height: 22px;
+    left: 145px;
+    top: 750px;
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+.line-3 {
+    position: absolute;
+    width: 132px;
+    height: 0px;
+    left: 1px;
+    top: 760px;
+
+    border: 1px solid #A8A6A7;
+    transform: rotate(-180deg);
+}
+
+.line-4 {
+    position: absolute;
+    width: 132px;
+    height: 0px;
+    left: 244px;
+    top: 760px;
+
+    border: 1px solid #A8A6A7;
+    transform: rotate(-180deg);
+}
+
+.forgot-pw {
+    position: absolute;
+    width: 342px;
+    height: 44px;
+    left: 240px;
+    top: 566px;
+}
