@@ -294,3 +294,7 @@ h1 {
 .signup {
     color: #56CCF2;
 }
+
+@media only screen and (max-width: 540px) {
+
+}
