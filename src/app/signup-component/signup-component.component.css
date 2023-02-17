@@ -217,14 +217,17 @@ h1 {
   border-bottom: none;
 }
 
+.btn-setup {
+  margin: auto;
+  width: 81.690140845%;
+  max-width: 350px;
+}
 .btn-action {
   background: #222222;
   border-radius: 20px;
   color: white;
-  
+
   width: 100%;
-  margin: 39px;
-  max-width: 350px;
 
   font-family: "Nunito";
   font-style: normal;
