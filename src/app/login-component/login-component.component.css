@@ -143,6 +143,7 @@ h1 {
     margin: 100px 43px 0px 43px;
 }
 
+
 .signin-form input {
     display: block;
     width: 100%;
@@ -189,8 +190,8 @@ h1 {
     border-radius: 20px;
     color: white;
 
-    width: 100%;
-    margin-top: 30px;
+    width: 81.690140845%;
+    margin: 30px 32px 0px 20px;
 
     font-family: "Nunito";
     font-style: normal;
@@ -216,31 +217,25 @@ h1 {
 }
 
 .google-icon {
-    max-width: 45.49px;
     margin: auto;
     display: grid;
     place-items: center;
 }
 
-.div2 {
-
+h2 {
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 0.1em;
     text-align: center;
-    margin-top: 20px;
+    margin: 16px 0px 20px;
+    border-bottom: 1px solid #a8a6a7;
 }
 
-.line-3 {
-    border: 1px solid #A8A6A7;
-    transform: rotate(-180deg);
-}
-
-.line-4 {
-    border: 1px solid #A8A6A7;
-    transform: rotate(-180deg);
+h2 span {
+    background: #fff;
+    padding: 0 10px;
 }
 
 .forgot-pw {
