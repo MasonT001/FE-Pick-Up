@@ -7,16 +7,29 @@
 
 <h1>Sign Up</h1>
 <div class="signup-prompt">First Create Your Account</div>
-<form class="signup-form">
-    <input class="signup-input-fn" type="text" placeholder="Full Name" required>
-    <input class="signup-input-email" type="text" placeholder="Email" email required>
-    <input class="signup-input-password" type="text" placeholder="Password" required>
-    <input class="signup-input-password-confirm" type="text" placeholder="Confirm Password" required>
+<form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <input class="signup-input-fn form-control" formControlName="fullName" type="text" placeholder="Full Name"
+            id="full-name">
+    </div>
+    <div class="form-group">
+        <input class="signup-input-email form-control" formControlName="email" type="text" placeholder="Email"
+            id="email">
+    </div>
+    <div class="form-group">
+        <input class="signup-input-password form-control" formControlName="password" type="text" placeholder="Password"
+            id="password">
+    </div>
+    <div class="form-group">
+        <input class="signup-input-password-confirm form-control" formControlName="confirmPassword" type="text"
+            placeholder="Confirm Password" id="confirm-password">
+    </div>
+
+    <div class="btn-setup">
+        <button class="btn-action" type="submit">SIGN UP</button>
+    </div>
 </form>
 
-<div class="btn-setup">
-    <button class="btn-action">SIGN UP</button>
-</div>
 <div class="active_usr">Already have an account? <a href="" class="redir_login">Login</a>
 </div>
 <div class="skip">
