@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SignupComponentComponent } from './signup-component/signup-component.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { HomePageComponent } from './home-page/home-page.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponentComponent,
     LoginComponentComponent,
+    HomePageComponent,
     
   ],
   imports: [

@@ -146,6 +146,12 @@ h1 {
   max-width: 418.1px;
 }
 
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+  border-radius: 10px;
+
+}
+
 .signup-input-fn {
   font-family: "Nunito", sans-serif;
   font-style: normal;
@@ -158,10 +164,10 @@ h1 {
   color: #a8a6a7;
 }
 
-.signup-input-fn:focus {
+/* .signup-input-fn:focus {
   outline: 1px solid green;
   border-bottom: none;
-}
+} */
 
 .signup-input-email {
   font-family: "Nunito", sans-serif;
@@ -174,10 +180,10 @@ h1 {
   color: #a8a6a7;
 }
 
-.signup-input-email:focus {
+/* .signup-input-email:focus {
   outline: 1px solid green;
   border-bottom: none;
-}
+} */
 
 .signup-input-password {
   font-family: "Nunito", sans-serif;
@@ -191,10 +197,10 @@ h1 {
   color: #a8a6a7;
 }
 
-.signup-input-password:focus {
+/* .signup-input-password:focus {
   outline: 1px solid green;
   border-bottom: none;
-}
+} */
 
 .signup-input-password-confirm {
   font-family: "Nunito", sans-serif;
@@ -207,10 +213,10 @@ h1 {
   color: #a8a6a7;
 }
 
-.signup-input-password-confirm:focus {
+/* .signup-input-password-confirm:focus {
   outline: 1px solid green;
   border-bottom: none;
-}
+} */
 
 .signup-input-password-confirm.dirty {
   outline: 1px solid red;
