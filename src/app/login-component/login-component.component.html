@@ -7,14 +7,21 @@
 
 <h1>Sign In</h1>
 <div class="div1">Enter Your Email and Password</div>
-<form class="signin-form">
-    <input class="signin-input-email" type="text" placeholder="Email">
-    <input class="signin-input-password" type="text" placeholder="Password">
-    <a href="" class="forgot-pw">Forgot Password?</a>
+<form class="signin-form" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <input class="signin-input-email" type="text" placeholder="Email" id="email" formControlName="email">
+        <span class="help-block" *ngIf="!signinForm.get('email')?.valid && signinForm.get('email')?.touched">Please enter your email</span>
+    </div>
+    <div class="form-group">
+        <input class="signin-input-password" type="text" placeholder="Password" id="password"
+            formControlName="password">
+            <span class="help-block" *ngIf="!signinForm.get('password')?.valid && signinForm.get('password')?.touched">Please enter your password</span>
+        <a href="" class="forgot-pw">Forgot Password?</a>
+    </div>
+    <div class="btn-setup">
+        <button class="btn-action" type="submit">LOGIN</button>
+    </div>
 </form>
-<div class="btn-setup">
-    <button class="btn-action">LOGIN</button>
-</div>
 <div class="inactive_usr">Don't have an account? <a href="" class="signup">Sign Up</a></div>
 <h2><span>Sign in with</span></h2>
 <div class="google-icon">
