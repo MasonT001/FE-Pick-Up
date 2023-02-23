@@ -22,15 +22,31 @@
 }
 
 @keyframes bounce-2 {
-    0%      { transform: translateY(0); }
-    50%     { transform: translateY(25px); }
-    100%    { transform: translateY(0);}
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes bounce-1 {
-    0%      { transform: translateY(0); }
-    50%     {transform: translateY(-25px); }
-    100%    { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .ellipse-lg-md-1 {
@@ -99,11 +115,7 @@
 }
 
 h1 {
-    position: relative;
-    width: 325px;
-    height: 109px;
-    top: 177px;
-    left: 25px;
+    margin-top: 177px;
 
     font-family: "Nunito", sans-serif;
     font-style: normal;
@@ -116,39 +128,37 @@ h1 {
 }
 
 .div1 {
-    position: absolute;
-    width: 382px;
-    height: 44px;
-    left: 75px;
-    top: 286px;
-
     font-family: "Nunito", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    display: flex;
-    align-items: center;
+
     text-align: center;
 
     color: #a8a6a7;
 }
 
-.signin-input-email {
-    position: absolute;
-    width: 342px;
-    height: 44px;
-    left: 45px;
-    top: 507px;
+.signin-form {
+    margin: 100px 43px 0px 43px;
+}
 
+
+.signin-form input {
+    display: block;
+    width: 100%;
+    padding-bottom: 16px;
+    max-width: 418.1px;
+}
+
+.signin-input-email {
     font-family: "Nunito", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    display: flex;
     align-items: center;
-    border: 0;
+    border: none;
     border-bottom: 1px solid #A8A6A7;
 
     color: #a8a6a7;
@@ -156,36 +166,32 @@ h1 {
 }
 
 .signin-input-password {
-    position: absolute;
-    width: 342px;
-    height: 44px;
-    left: 45px;
-    top: 551px;
-
     font-family: "Nunito", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    display: flex;
     align-items: center;
     border: 0;
     border-bottom: 1px solid #A8A6A7;
-    border-top: 1px solid #A8A6A7;
 
     color: #a8a6a7;
 
 }
 
+.btn-setup {
+    margin: auto;
+    width: 81.690140845%;
+    max-width: 350px;
+}
+
 .btn-action {
-    position: absolute;
-    width: 350px;
-    height: 44px;
-    left: 14px;
-    top: 630px;
     background: #222222;
     border-radius: 20px;
     color: white;
+
+    width: 81.690140845%;
+    margin: 30px 32px 0px 20px;
 
     font-family: "Nunito";
     font-style: normal;
@@ -195,97 +201,61 @@ h1 {
 }
 
 .inactive_usr {
-    position: absolute;
-    width: 382px;
-    height: 44px;
-    left: 65px;
-    top: 700px;
-
     font-family: "Nunito";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
 
+    text-align: center;
+    margin-top: 16px;
 }
 
 .signin-options {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 770px;
-    left: 135px
+    max-width: 75px;
+    max-height: 75px;
 }
 
-.div2 {
-    position: absolute;
-    height: 22px;
-    left: 145px;
-    top: 750px;
+.google-icon {
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
 
+h2 {
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    text-align: right;
+    line-height: 0.1em;
+    text-align: center;
+    margin: 16px 0px 20px;
+    border-bottom: 1px solid #a8a6a7;
 }
 
-.line-3 {
-    position: absolute;
-    width: 132px;
-    height: 0px;
-    left: 1px;
-    top: 760px;
-
-    border: 1px solid #A8A6A7;
-    transform: rotate(-180deg);
-}
-
-.line-4 {
-    position: absolute;
-    width: 132px;
-    height: 0px;
-    left: 244px;
-    top: 760px;
-
-    border: 1px solid #A8A6A7;
-    transform: rotate(-180deg);
+h2 span {
+    background: #fff;
+    padding: 0 10px;
 }
 
 .forgot-pw {
-    position: absolute;
-    width: 342px;
-    height: 44px;
-    left: 230px;
-    top: 566px;
-
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    
+
     color: #56CCF2;
 }
 
 .skip {
-    position: absolute;
-    height: 22px;
-    width: 94px;
-    left: 140px;
-    top: 880px;
-
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
 
-    display: flex;
-    align-items: center;
+    margin-top: 28px;
     text-align: center;
 
     color: #a8a6a7;
@@ -295,6 +265,4 @@ h1 {
     color: #56CCF2;
 }
 
-@media only screen and (max-width: 540px) {
-
-}
+@media only screen and (max-width: 540px) {}

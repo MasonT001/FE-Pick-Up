@@ -1,296 +1,277 @@
 .ellipse-lg {
-    position: absolute;
-    border-radius: 50%;
-    width: 280px;
-    height: 280px;
-    top: -128px;
-    left: -128px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  top: -128px;
+  left: -128px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
-    background: #e5e5e5;
+  background: #e5e5e5;
 }
 
 .bounce-1 {
-    animation-name: bounce-1;
-    animation-timing-function: ease;
+  animation-name: bounce-1;
+  animation-timing-function: ease;
 }
 
 .bounce-2 {
-    animation-name: bounce-2;
-    animation-timing-function: ease;
+  animation-name: bounce-2;
+  animation-timing-function: ease;
 }
 
 @keyframes bounce-2 {
-    0%      { transform: translateY(0); }
-    50%     { transform: translateY(25px); }
-    100%    { transform: translateY(0);}
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounce-1 {
-    0%      { transform: translateY(0); }
-    50%     {transform: translateY(-25px); }
-    100%    { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    background-image: url('https://gray-ksla-prod.cdn.arcpublishing.com/resizer/mc50uEFyQwM3fZpfCr2WkTN0H9c=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/5IPLAK4UXFFNZJPA7KDGEHQQNU.jpg');
+  }
 }
 
 .ellipse-lg-md-1 {
-    position: absolute;
-    border-radius: 50%;
-    width: 51px;
-    height: 51px;
-    left: 114px;
-    top: 48px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  border-radius: 50%;
+  width: 51px;
+  height: 51px;
+  left: 114px;
+  top: 48px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
-    background: #e9e9ed;
+  background: #e9e9ed;
 }
 
 .ellipse-lg-md-2 {
-    position: absolute;
-    border-radius: 50%;
-    width: 51px;
-    height: 51px;
-    left: 233px;
-    top: 63px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  border-radius: 50%;
+  width: 51px;
+  height: 51px;
+  left: 233px;
+  top: 63px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
-    background: #e9e9ed;
+  background: #e9e9ed;
 }
 
 .ellipse-dg-md-1 {
-    position: absolute;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    left: 41px;
-    top: 124px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  left: 41px;
+  top: 124px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
-    background: #727272;
+  background: #727272;
 }
 
 .ellipse-dg-md-2 {
-    position: absolute;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    left: 223px;
-    top: 53px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  left: 223px;
+  top: 53px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
-    background: #727272;
+  background: #727272;
 }
 
 .ellipse-dg-sm-1 {
-    position: absolute;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    left: 154px;
-    top: 51px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  position: absolute;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  left: 154px;
+  top: 51px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
-    background: #727272;
+  background: #727272;
 }
 
 h1 {
-    position: absolute;
-    height: 109px;
-    top: 177px;
-    left: 100px;
+  margin-top: 177px;
 
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 55px;
-    text-align: center;
+  /* Typography */
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+  text-align: center;
 
-    color: black;
+  color: black;
 }
 
-.div1 {
-    position: absolute;
-    width: 382px;
-    height: 44px;
-    left: 80px;
-    top: 286px;
+.signup-prompt {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
 
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+  color: #a8a6a7;
+}
 
-    color: #a8a6a7;
+.signup-form {
+  margin: 100px 43px 0px 43px;
+}
+
+.signup-form input {
+  display: block;
+  width: 100%;
+  padding-bottom: 16px;
+  max-width: 418.1px;
+}
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+  border-radius: 10px;
+
 }
 
 .signup-input-fn {
-    position: absolute;
-    width: 342px;
-    height: 44px;
-    left: 45px;
-    top: 463px;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  border-bottom: 1px solid #a8a6a7;
 
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    border: none;
-    border-bottom: 1px solid #a8a6a7;
-
-    color: #a8a6a7;
-
+  color: #a8a6a7;
 }
 
-.signup-input-fn:focus {
-    outline: 1px solid green;
-    border-bottom: none;
-}
+/* .signup-input-fn:focus {
+  outline: 1px solid green;
+  border-bottom: none;
+} */
 
 .signup-input-email {
-    position: absolute;
-    width: 342px;
-    height: 44px;
-    left: 45px;
-    top: 510px;
-
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    border: 0;
-    border-bottom: 1px solid #a8a6a7;
-    color: #a8a6a7;
-
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border: 0;
+  border-bottom: 1px solid #a8a6a7;
+  color: #a8a6a7;
 }
 
-.signup-input-email:focus {
-    outline: 1px solid green;
-    border-bottom: none;
-}
+/* .signup-input-email:focus {
+  outline: 1px solid green;
+  border-bottom: none;
+} */
 
 .signup-input-password {
-    position: absolute;
-    width: 342px;
-    height: 44px;
-    left: 45px;
-    top: 557px;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border: 0;
+  border-bottom: 1px solid #a8a6a7;
 
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    border: 0;
-    border-bottom: 1px solid #A8A6A7;
-
-    color: #a8a6a7;
-
+  color: #a8a6a7;
 }
 
-.signup-input-password:focus {
-    outline: 1px solid green;
-    border-bottom: none;
-}
+/* .signup-input-password:focus {
+  outline: 1px solid green;
+  border-bottom: none;
+} */
 
 .signup-input-password-confirm {
-        position: absolute;
-        width: 342px;
-        height: 44px;
-        left: 45px;
-        top: 605px;
-    
-        font-family: "Nunito", sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
-        display: flex;
-        align-items: center;
-        border: none;
-        border-bottom: 1px solid #A8A6A7;    
-        color: #a8a6a7;
-    
-    
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  border-bottom: 1px solid #a8a6a7;
+  color: #a8a6a7;
 }
 
-.signup-input-password-confirm:focus {
-    outline: 1px solid green;
-    border-bottom: none;
+/* .signup-input-password-confirm:focus {
+  outline: 1px solid green;
+  border-bottom: none;
+} */
+
+.signup-input-password-confirm.dirty {
+  outline: 1px solid red;
+  border-bottom: none;
 }
 
-.signup-input-password-confirm.dirty{
-    outline: 1px solid red;
-    border-bottom: none;
+.btn-setup {
+  margin: auto;
+  width: 81.690140845%;
+  max-width: 350px;
+  margin-top: 16px;
 }
-
 .btn-action {
-    position: absolute;
-    width: 350px;
-    height: 44px;
-    top: 698px;
-    background: #222222;
-    border-radius: 20px;
-    color: white;
+  background: #222222;
+  border-radius: 20px;
+  color: white;
 
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 30px;
+  width: 100%;
+
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
 }
 
 .active_usr {
-    position: absolute;
-    width: 382px;
-    height: 44px;
-    left: 83px;
-    top: 758px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+  text-align: center;
+  margin-top: 16px;
 }
 
 .redir_login {
-    color: #56CCF2;
+  color: #56ccf2;
 }
 
 .skip {
-    position: absolute;
-    height: 22px;
-    width: 94px;
-    left: 135px;
-    top: 830px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+  margin: 28px 167px;
 
-    display: flex;
-    align-items: center;
-    text-align: center;
-
-    color: #a8a6a7;
+  color: #a8a6a7;
 }
