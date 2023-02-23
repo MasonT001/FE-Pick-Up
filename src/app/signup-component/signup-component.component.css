@@ -45,6 +45,12 @@
   }
 }
 
+@media (min-width: 1025px) {
+  body {
+    background-image: url('https://gray-ksla-prod.cdn.arcpublishing.com/resizer/mc50uEFyQwM3fZpfCr2WkTN0H9c=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/5IPLAK4UXFFNZJPA7KDGEHQQNU.jpg');
+  }
+}
+
 .ellipse-lg-md-1 {
   position: absolute;
   border-radius: 50%;
@@ -251,6 +257,7 @@ input.ng-invalid.ng-touched{
   line-height: 22px;
 
   text-align: center;
+  margin-top: 16px;
 }
 
 .redir_login {
