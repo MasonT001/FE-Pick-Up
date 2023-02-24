@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Injectable, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-signup-component',
@@ -25,7 +27,15 @@ export class SignupComponentComponent implements OnInit{
     })
   }
 
-  onSubmit() {
-    console.log(this.signupForm)
+  onUserCreated(user: {fullName: string, email: string, password: string, confirmPassword: string}) {
+    console.log(user)
+    this.http.post('http://localhost:3000/users.json', user)
+    .subscribe((res) => {
+      console.log(res);
+    });
   }
+
+  // onSubmit() {
+  //   console.log(this.signupForm)
+  // }
 }

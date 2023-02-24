@@ -9,7 +9,7 @@
 
         <h1>Sign Up</h1>
         <div class="signup-prompt">First Create Your Account</div>
-        <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onUserCreated(signupForm.value)">
             <div formGroupName="userData">
                 <div class="form-group">
                     <input class="signup-input-fn form-control" formControlName="fullName" type="text"
