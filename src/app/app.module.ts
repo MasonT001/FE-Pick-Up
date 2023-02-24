@@ -8,6 +8,7 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component'
+// import { MaterialModule } from './shared/material.module'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomePageComponent } from './home-page/home-page.component'
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    // MaterialModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
