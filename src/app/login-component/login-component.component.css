@@ -143,6 +143,11 @@ h1 {
     margin: 100px 43px 0px 43px;
 }
 
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+    border-radius: 10px;
+  
+  }
 
 .signin-form input {
     display: block;

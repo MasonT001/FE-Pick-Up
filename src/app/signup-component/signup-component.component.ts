@@ -19,17 +19,19 @@ export class SignupComponentComponent implements OnInit{
   ngOnInit() {
     this.signupForm = new FormGroup({
       'userData': new FormGroup({
-        'fullName': new FormControl(null, Validators.required),
+        'first_name': new FormControl(null, Validators.required),
+        'last_name': new FormControl(null, Validators.required),
         'email': new FormControl(null, [Validators.required, Validators.email]),
+        'phone': new FormControl(null, Validators.required),
         'password': new FormControl(null, [Validators.required, Validators.minLength(8)]),
-        'confirmPassword': new FormControl(null, Validators.required)
+        'password_confirmation': new FormControl(null, Validators.required)
       }),
     })
   }
 
-  onUserCreated(user: {fullName: string, email: string, password: string, confirmPassword: string}) {
-    console.log(user)
-    this.http.post('https://pick-up-sports-api.herokuapp.com/users.json', user)
+  onUserCreated(user: any) {
+    console.log(user.userData)
+    this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/users/create', user.userData)
     .subscribe((res) => {
       console.log(res);
     });

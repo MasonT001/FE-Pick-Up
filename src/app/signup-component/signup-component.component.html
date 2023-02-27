@@ -12,12 +12,28 @@
         <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onUserCreated(signupForm.value)">
             <div formGroupName="userData">
                 <div class="form-group">
-                    <input class="signup-input-fn form-control" formControlName="fullName" type="text"
-                        placeholder="Full Name" id="full-name" />
+                    <input class="signup-input-fn form-control" formControlName="first_name" type="text"
+                        placeholder="First Name" id="full-name" />
                     <span class="help-block" *ngIf="
-              !signupForm.get('userData.fullName')?.valid &&
-              signupForm.get('userData.fullName')?.touched
-            ">Please enter your full name</span>
+              !signupForm.get('userData.first_name')?.valid &&
+              signupForm.get('userData.first_name')?.touched
+            ">Please enter your first name</span>
+                </div>
+                <div class="form-group">
+                    <input class="signup-input-ln form-control" formControlName="last_name" type="text"
+                        placeholder="Last Name" id="full-name" />
+                    <span class="help-block" *ngIf="
+              !signupForm.get('userData.last_name')?.valid &&
+              signupForm.get('userData.last_name')?.touched
+            ">Please enter your last name</span>
+                </div>
+                <div class="form-group">
+                    <input class="signup-input-phone form-control" formControlName="phone" type="text"
+                        placeholder="Phone Number" id="phone" />
+                    <span class="help-block" *ngIf="
+              !signupForm.get('userData.phone')?.valid &&
+              signupForm.get('userData.phone')?.touched
+            ">Please enter your phone number</span>
                 </div>
                 <div class="form-group">
                     <input class="signup-input-email form-control" formControlName="email" type="text"
@@ -28,7 +44,7 @@
             ">Please enter your email!</span>
                 </div>
                 <div class="form-group">
-                    <input class="signup-input-password form-control" formControlName="password" type="text"
+                    <input class="signup-input-password form-control" formControlName="password" type="password"
                         placeholder="Password" id="password" />
                     <span class="help-block" *ngIf="
               !signupForm.get('userData.password')?.valid &&
@@ -36,8 +52,8 @@
             ">Please enter a password!</span>
                 </div>
                 <div class="form-group">
-                    <input class="signup-input-password-confirm form-control" formControlName="confirmPassword"
-                        type="text" placeholder="Confirm Password" id="confirm-password" />
+                    <input class="signup-input-password-confirm form-control" formControlName="password_confirmation"
+                        type="password" placeholder="Confirm Password" id="confirm-password" />
                     <span class="help-block" *ngIf="
               !signupForm.get('userData.confirmPassword')?.valid &&
               signupForm.get('userData.confirmPassword')?.touched

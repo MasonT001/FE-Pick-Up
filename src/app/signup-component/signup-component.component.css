@@ -172,6 +172,30 @@ input.ng-invalid.ng-touched{
   color: #a8a6a7;
 }
 
+.signup-input-phone {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  border-bottom: 1px solid #a8a6a7;
+
+  color: #a8a6a7;
+}
+
+.signup-input-ln {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  border-bottom: 1px solid #a8a6a7;
+
+  color: #a8a6a7;
+}
+
 /* .signup-input-fn:focus {
   outline: 1px solid green;
   border-bottom: none;
