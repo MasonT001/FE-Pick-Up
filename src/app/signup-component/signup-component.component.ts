@@ -29,7 +29,7 @@ export class SignupComponentComponent implements OnInit{
 
   onUserCreated(user: {fullName: string, email: string, password: string, confirmPassword: string}) {
     console.log(user)
-    this.http.post('http://localhost:3000/users.json', user)
+    this.http.post('https://pick-up-sports-api.herokuapp.com/users.json', user)
     .subscribe((res) => {
       console.log(res);
     });
