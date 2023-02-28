@@ -1,7 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-login-component',
@@ -11,7 +13,7 @@ import { Router, RouterLink } from '@angular/router';
 export class LoginComponentComponent implements OnInit{
   signinForm!: FormGroup
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
     this.signinForm = new FormGroup({
@@ -27,11 +29,13 @@ export class LoginComponentComponent implements OnInit{
   // }
 
   onUserLogin(user: any) {
-    console.log(user.userData)
-    this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/users/login', user.userData)
-    .subscribe((res) => {
-      console.log(res);
-      this.router.navigate(['/home'])
-    });
+    this.authService.onUserLogin(user)
+    this.authService.getAuthToken()
   }
+
+  onUserLogout() {
+    this.onUserLogout()
+  }
+  
+  
 }
