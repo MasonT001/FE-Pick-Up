@@ -30,11 +30,10 @@ export class LoginComponentComponent implements OnInit{
 
   onUserLogin(user: any) {
     this.authService.onUserLogin(user)
-    this.authService.getAuthToken()
   }
 
   onUserLogout() {
-    this.onUserLogout()
+    this.authService.onUserLogout()
   }
   
   

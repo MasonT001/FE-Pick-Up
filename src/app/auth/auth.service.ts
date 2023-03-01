@@ -17,17 +17,13 @@ export class AuthService {
       }
 
       onUserLogout() {
-        let auth_token = this.getAuthToken()
+        let auth_token = "c6cde62c33d319e02cd87f30d5d175e49da738b1"
         this.http.delete('https://pick-up-sports-api.herokuapp.com/api/v1/users/logout', { headers: new HttpHeaders({
           'Authorization': `Bearer ${auth_token}`
         })})
         .subscribe((res: any) => {
-          // console.log(res)
+          console.log(res)
         });
         localStorage.removeItem("currentUser") 
-      }
-
-      getAuthToken() {
-        return localStorage.getItem('token.value')
       }
 }
