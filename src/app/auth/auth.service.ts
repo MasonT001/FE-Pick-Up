@@ -8,7 +8,7 @@ export class AuthService {
     constructor(private http: HttpClient, private router: Router) { }
 
     onUserLogin(user: any) {
-        this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/users/login', user.userData)
+        this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/users/login', user.userData,)
         .subscribe((responseData) => {
           console.log(responseData);
           this.router.navigate(['/home'])
