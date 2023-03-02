@@ -3,6 +3,7 @@ import { Component, Injectable, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-signup-component',
@@ -14,7 +15,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class SignupComponentComponent implements OnInit{
   signupForm!: FormGroup;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private authService: AuthService) { }
 
   ngOnInit() {
     this.signupForm = new FormGroup({
@@ -30,11 +31,7 @@ export class SignupComponentComponent implements OnInit{
   }
 
   onUserCreated(user: any) {
-    console.log(user.userData)
-    this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/users/create', user.userData)
-    .subscribe((res) => {
-      console.log(res);
-    });
+    this.authService.onUserCreated(user)
   }
 
   // onSubmit() {

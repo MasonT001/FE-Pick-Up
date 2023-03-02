@@ -13,7 +13,7 @@
             <div formGroupName="userData">
                 <div class="form-group">
                     <input class="signup-input-fn form-control" formControlName="first_name" type="text"
-                        placeholder="First Name" id="full-name" />
+                        placeholder="First Name" id="first-name" />
                     <span class="help-block" *ngIf="
               !signupForm.get('userData.first_name')?.valid &&
               signupForm.get('userData.first_name')?.touched
@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <input class="signup-input-ln form-control" formControlName="last_name" type="text"
-                        placeholder="Last Name" id="full-name" />
+                        placeholder="Last Name" id="last-name" />
                     <span class="help-block" *ngIf="
               !signupForm.get('userData.last_name')?.valid &&
               signupForm.get('userData.last_name')?.touched

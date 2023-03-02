@@ -1,4 +1,4 @@
-.column {
-    float: left;
-    width: 33%;
-}
+
+.navbar-nav .active {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.55);
+  }
