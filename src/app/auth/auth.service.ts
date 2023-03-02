@@ -1,23 +1,25 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
+import { UserService } from "./user.service";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private userService: UserService) { }
 
   onUserLogin(user: any) {
     this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/users/login', user.userData,)
-      .subscribe((responseData) => {
+      .subscribe((responseData: any) => {
         console.log(responseData);
         this.router.navigate(['/home'])
-        localStorage.setItem('currentUser', JSON.stringify(responseData))
+        localStorage.setItem('tokenValue', JSON.stringify(responseData.payload.token.value))
+        this.userService.setUser(responseData.payload.user)
       });
   }
 
   onUserLogout() {
-    let auth_token = "c6cde62c33d319e02cd87f30d5d175e49da738b1"
+    let auth_token = localStorage.getItem('tokenValue')
     this.http.delete('https://pick-up-sports-api.herokuapp.com/api/v1/users/logout', {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${auth_token}`
@@ -26,7 +28,7 @@ export class AuthService {
       .subscribe((res: any) => {
         console.log(res)
       });
-    localStorage.removeItem("currentUser")
+    localStorage.removeItem("tokenValue")
   }
 
   onUserCreated(user: any) {
