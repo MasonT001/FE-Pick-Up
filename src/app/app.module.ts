@@ -8,13 +8,14 @@ import { LoginComponentComponent } from './login-component/login-component.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
-
+import { NavbarComponent } from './shared/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponentComponent,
     LoginComponentComponent,
     HomePageComponent,
+    NavbarComponent
     
   ],
   imports: [

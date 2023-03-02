@@ -6,7 +6,12 @@ import { UserService } from "./user.service";
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
+  loggedIn: boolean = false
   constructor(private http: HttpClient, private router: Router, private userService: UserService) { }
+
+  isLoggedIn() {
+    return this.loggedIn
+  }
 
   onUserLogin(user: any) {
     this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/users/login', user.userData,)
@@ -15,6 +20,7 @@ export class AuthService {
         this.router.navigate(['/home'])
         localStorage.setItem('tokenValue', JSON.stringify(responseData.payload.token.value))
         this.userService.setUser(responseData.payload.user)
+        this.loggedIn = true;
       });
   }
 
@@ -27,8 +33,9 @@ export class AuthService {
     })
       .subscribe((res: any) => {
         console.log(res)
+        localStorage.removeItem("tokenValue")
+        this.router.navigate(['/login'])
       });
-    localStorage.removeItem("tokenValue")
   }
 
   onUserCreated(user: any) {

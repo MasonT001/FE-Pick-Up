@@ -285,7 +285,7 @@ h2 span {
 }
 
 @media(max-width: 992px) {
-    .singin-col-2 {
+    .signin-col-2 {
         display: none;
     }
     
@@ -302,7 +302,7 @@ h2 span {
         width: 50%;
     }
 
-    .singin-col-2 {
+    .signin-col-2 {
         width: 50%;
     }
 }
