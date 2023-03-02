@@ -1,5 +1,9 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-login-component',
@@ -8,6 +12,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponentComponent implements OnInit{
   signinForm!: FormGroup
+
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
     this.signinForm = new FormGroup({
@@ -18,7 +24,17 @@ export class LoginComponentComponent implements OnInit{
     })
   }
 
-  onSubmit() {
-    console.log(this.signinForm)
+  // onSubmit() {
+  //   console.log(this.signinForm)
+  // }
+
+  onUserLogin(user: any) {
+    this.authService.onUserLogin(user)
   }
+
+  onUserLogout() {
+    this.authService.onUserLogout()
+  }
+  
+  
 }

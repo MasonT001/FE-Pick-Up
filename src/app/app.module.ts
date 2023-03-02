@@ -7,7 +7,7 @@ import { SignupComponentComponent } from './signup-component/signup-component.co
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HomePageComponent } from './home-page/home-page.component'
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { HomePageComponent } from './home-page/home-page.component'
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

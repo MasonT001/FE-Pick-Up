@@ -1,33 +1,49 @@
-<div class="bounce-1 ellipse-lg"></div>
-<div class="bounce-1 ellipse-lg-md-1"></div>
-<div class="bounce-1 ellipse-lg-md-2"></div>
-<div class="bounce-2 ellipse-dg-md-1"></div>
-<div class="bounce-2 ellipse-dg-md-2"></div>
-<div class="bounce-2 ellipse-dg-sm-1"></div>
+<div class="container-flex">
+    <div class="signin-col-1">
+        <div class="bounce-1 ellipse-lg"></div>
+        <div class="bounce-1 ellipse-lg-md-1"></div>
+        <div class="bounce-1 ellipse-lg-md-2"></div>
+        <div class="bounce-2 ellipse-dg-md-1"></div>
+        <div class="bounce-2 ellipse-dg-md-2"></div>
+        <div class="bounce-2 ellipse-dg-sm-1"></div>
 
-<h1>Sign In</h1>
-<div class="div1">Enter Your Email and Password</div>
-<form class="signin-form" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
-    <div class="formGroupName='userData'">
-        <div class="form-group">
-            <input class="signin-input-email" type="text" placeholder="Email" id="email" formControlName="email">
-            <span class="help-block" *ngIf="!signinForm.get('userData.email')?.valid && signinForm.get('userData.email')?.touched">Please enter your email</span>
+        <h1>Sign In</h1>
+        <div class="div1">Enter Your Email and Password</div>
+        <form class="signin-form" [formGroup]="signinForm" (ngSubmit)="onUserLogin(signinForm.value)">
+            <div formGroupName="userData">
+                <div class="form-group">
+                    <input class="signin-input-email" type="text" placeholder="Email" id="email"
+                        formControlName="email">
+                    <span class="help-block"
+                        *ngIf="!signinForm.get('userData.email')?.valid && signinForm.get('userData.email')?.touched">Please
+                        enter your email</span>
+                </div>
+                <div class="form-group">
+                    <input class="signin-input-password" type="password" placeholder="Password" id="password"
+                        formControlName="password">
+                    <span class="help-block"
+                        *ngIf="!signinForm.get('userData.password')?.valid && signinForm.get('userData.password')?.touched">Please
+                        enter your password</span>
+                    <a class="forgot-pw">Forgot Password?</a>
+                </div>
+            </div>
+            <div class="btn-setup">
+                <button class="btn-action" type="submit">LOGIN</button>
+            </div>
+        </form>
+        <div class="inactive_usr">Don't have an account? <a href="" class="signup" routerLink="/signup">Sign Up</a>
         </div>
-        <div class="form-group">
-            <input class="signin-input-password" type="text" placeholder="Password" id="password"
-                formControlName="password">
-                <span class="help-block" *ngIf="!signinForm.get('userData.password')?.valid && signinForm.get('userData.password')?.touched">Please enter your password</span>
-            <a href="" class="forgot-pw">Forgot Password?</a>
+        <h2><span>Sign in with</span></h2>
+        <div class="google-icon">
+            <img class="signin-options"
+                src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                alt="Google Icon">
         </div>
+        <div class="skip">Skip now--></div>
     </div>
-    <div class="btn-setup">
-        <button class="btn-action" type="submit">LOGIN</button>
+    <div class="signin-col-2">
+        <img src="https://gray-ksla-prod.cdn.arcpublishing.com/resizer/mc50uEFyQwM3fZpfCr2WkTN0H9c=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/5IPLAK4UXFFNZJPA7KDGEHQQNU.jpg"
+            alt="">
     </div>
-</form>
-<div class="inactive_usr">Don't have an account? <a href="" class="signup">Sign Up</a></div>
-<h2><span>Sign in with</span></h2>
-<div class="google-icon">
-    <img class="signin-options" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
-        alt="Google Icon">
+
 </div>
-<div class="skip">Skip now--></div>

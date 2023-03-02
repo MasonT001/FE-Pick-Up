@@ -115,7 +115,7 @@
 }
 
 h1 {
-    margin-top: 177px;
+    padding-top: 177px;
 
     font-family: "Nunito", sans-serif;
     font-style: normal;
@@ -143,12 +143,19 @@ h1 {
     margin: 100px 43px 0px 43px;
 }
 
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+    border-radius: 10px;
+  
+  }
 
 .signin-form input {
     display: block;
     width: 100%;
     padding-bottom: 16px;
     max-width: 418.1px;
+    /* Center Input */
+    margin: 0 auto;
 }
 
 .signin-input-email {
@@ -246,6 +253,8 @@ h2 span {
     line-height: 22px;
 
     color: #56CCF2;
+    text-align: center;
+    padding-left: 585px;
 }
 
 .skip {
@@ -265,4 +274,36 @@ h2 span {
     color: #56CCF2;
 }
 
-@media only screen and (max-width: 540px) {}
+.signin-col-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-flex {
+    height: 100%;
+}
+
+@media(max-width: 992px) {
+    .singin-col-2 {
+        display: none;
+    }
+    
+    .container-flex {
+        display: block;
+    }
+
+@media(min-width: 992px) {
+    .container-flex {
+        display:flex;
+    }
+
+    .signin-col-1 {
+        width: 50%;
+    }
+
+    .singin-col-2 {
+        width: 50%;
+    }
+}
+}
