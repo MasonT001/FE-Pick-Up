@@ -7,23 +7,17 @@ import { AuthService } from './auth/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
+  title = 'FE-Pick-Up';
 
   ngOnInit(): void {
-    
   }
-
-  constructor(private authService: AuthService, private router: Router) { }
-  title = 'FE-Pick-Up';
-  hasToken = false
   
-  autoLogin() {
-    if (localStorage.getItem('tokenValue')) {
-      this.hasToken = true
-      this.router.navigate(['/home'])
-    } else {
-      this.router.navigate(['/login'])
-    }
-  }
+  constructor(private authService: AuthService, private router: Router) { }
+
 
 }
+// function autoLogin() {
+//   throw new Error('Function not implemented.');
+// }
+

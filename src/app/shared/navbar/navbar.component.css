@@ -1,0 +1,60 @@
+.search-bar {
+    border-radius: 18px;
+}
+
+.up {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    border-radius: 25px;
+    border-radius: 3px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    height: 40px;
+    
+    background: #c00;
+    color: white;
+    background: #ffa842;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration: none;
+    color: black;
+    /* font-family: 'Nunito', sans-serif; */
+    margin-right: 5px;
+}
+
+ul.icons-ul {
+    display: flex;
+    list-style:none;
+    padding: 0px;
+    justify-content: space-between;
+}   
+
+.search-bar {
+    border: 0;
+    border-radius: 0;
+}
+
+form input {
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+form button {
+    background: tomato;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
