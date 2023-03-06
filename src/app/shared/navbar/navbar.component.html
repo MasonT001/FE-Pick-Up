@@ -1,36 +1,71 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+  <div class="container-fluid">
+    <a class="navbar-brand">Pick</a>
+    <div class="up">UP</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: center;">
+      <ul class="icons-ul">
+        <li class="nav-item">
+          <img src="/assets/images/Home.svg" alt="home image" style="cursor: pointer;">
+        </li>
+        <li class="nav-item">
+          <img src="/assets/images/3 User.svg" alt="user image">
+        </li>
+        <li class="nav-item">
+          <img src="assets/images/Notification.svg" alt="notification image">
+        </li>
+        <li class="nav-item">
+          <img src="assets/images/Chat.svg" alt="chat image">
+        </li>
+        <li class="nav-item">
+          <img src="/assets/images/Profile.svg" alt="profile image">
+        </li>
+      </ul>
     </div>
-  </nav>
+    <div class="wrapper">
+      <form class="d-flex">
+        <input class="search-bar" type="search" placeholder="Search" aria-label="Search">
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="col-left">
+    <div class="event-container">
+      <input type="text" placeholder="Create an event">
+      <button type="submit">Post Event</button>
+    </div>
+    <div class="stats">
+      <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
+        alt="">
+      <p>Username</p>
+      <p>Description</p>
+      <p class="my_posts">My Posts: 10</p>
+        <p class="my_events">My Events: 8</p>
+    </div>
+    <div class="hashtags">
+      <h2>Followed Hashtags</h2>
+      <hr />
+      <ul class="hashtag_list">
+        <li>
+          <p>#Gaming</p>
+        </li>
+        <li>
+          <p>#Fortnite</p>
+        </li>
+      </ul>
+    </div>
+</div>
+<div class="col-mid">
+  <div class="post-event">
+    <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg" alt="">
+    <input type="text"  placeholder="Write Something..." class="text-input">
+    <input type="text" placeholder="Photo" class="photo-input">
+    <button class="event-submit">Submit Post</button>
+  </div>
+</div>
+

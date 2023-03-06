@@ -281,11 +281,11 @@ h2 span {
 }
 
 .container-flex {
-    height: 100%;
+    min-height: 100vh;
 }
 
 @media(max-width: 992px) {
-    .singin-col-2 {
+    .signin-col-2 {
         display: none;
     }
     
@@ -293,6 +293,7 @@ h2 span {
         display: block;
     }
 
+}
 @media(min-width: 992px) {
     .container-flex {
         display:flex;
@@ -302,8 +303,7 @@ h2 span {
         width: 50%;
     }
 
-    .singin-col-2 {
+    .signin-col-2 {
         width: 50%;
     }
-}
 }

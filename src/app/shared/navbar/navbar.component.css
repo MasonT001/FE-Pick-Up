@@ -1,0 +1,196 @@
+.container {
+    display: flex;
+}
+
+.search-bar {
+    border-radius: 18px;
+}
+
+.up {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    border-radius: 25px;
+    border-radius: 3px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    height: 40px;
+
+    background: #c00;
+    color: white;
+    background: #ffa842;
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration: none;
+    color: black;
+    /* font-family: 'Nunito', sans-serif; */
+    margin-right: 5px;
+}
+
+ul.icons-ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding-top: 24px;
+    margin: 0px 65px 0px 0px;
+}
+
+.search-bar {
+    border: 0;
+    border-radius: 0;
+}
+
+form input {
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+form button {
+    background: tomato;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.col-left {
+    width: 26%;
+}
+
+.event-container input {
+    display: block;
+    width: 168px;
+    height: 74px;
+    border: none;
+    background: lavender;
+    margin-bottom: 1px solid white;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 67px;
+    text-align: center;
+}
+
+.event-container button {
+    width: 168px;
+    height: 41px;
+    outline: none;
+    border: none;
+    background: orange;
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 1px solid white;
+    margin-top: 1px;
+}
+
+.stats {
+    width: 278px;
+    height: 115px;
+    margin-top: 62px;
+
+
+    background: #F6F6;
+}
+
+.stats img {
+    width: 44px;
+    height: 44px;
+}
+
+.my_posts {
+    width: 58px;
+    height: 12px;
+}
+
+.my_events {
+    width: 58px;
+    height: 12px;
+}
+
+.hashtags {
+    margin-top: 58px;
+    background: lightblue;
+    width: 278px;
+    height: 188px;
+    border-radius: 20px;
+}
+
+.hashtags h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+        padding-top: 17.74px;
+        padding-left: 28.76px;
+
+}
+
+.hashtags li {
+    background: red;
+    width: 61.35px;
+    height: 22.7px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 150%;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.hashtags hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.col-mid {
+    width: 33%;
+    display: flex;
+}
+
+.text-input {
+    width: 570px;
+    height: 107px;
+    border: none;
+    background: red;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.photo-input {
+    width: 493px;
+    height: 70px;
+    border-radius: 0px 0px 0px 10px;
+    border: none;
+    background: lightsalmon;
+}
+
+.event-submit {
+    width: 77px;
+    height: 70px;
+    border-radius: 0px 0px 10px 0px;
+    border: none;
+    position: relative;
+    bottom: 12px;
+}
+
+.post-event img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 45px;
+    left: 5px;
+    border-radius: 20px;
+}
