@@ -1,3 +1,7 @@
+.container {
+    display: flex;
+}
+
 .search-bar {
     border-radius: 18px;
 }
@@ -59,6 +63,10 @@ form button {
     cursor: pointer;
 }
 
+.col-left {
+    width: 33%;
+}
+
 .event-container input {
     display: block;
     width: 168px;
@@ -68,6 +76,7 @@ form button {
     margin-bottom: 1px solid white;
     border-radius: 10px 10px 0px 0px;
     margin-top: 67px;
+    text-align: center;
 }
 
 .event-container button {
@@ -84,6 +93,7 @@ form button {
 .stats {
     width: 278px;
     height: 115px;
+    margin-top: 62px;
 
 
     background: #F6F6;
@@ -139,4 +149,34 @@ form button {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+}
+
+.col-mid {
+    width: 33%;
+    display: flex;
+}
+
+.text-input {
+    width: 570px;
+    height: 107px;
+    border: none;
+    background: red;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.photo-input {
+    width: 493px;
+    height: 70px;
+    border-radius: 0px 0px 0px 10px;
+    border: none;
+    background: lightsalmon;
+}
+
+.event-submit {
+    width: 77px;
+    height: 70px;
+    border-radius: 0px 0px 10px 0px;
+    border: none;
+    position: relative;
+    bottom: 12px;
 }
