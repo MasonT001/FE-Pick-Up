@@ -1,0 +1,20 @@
+.container {
+    width: 278px;
+    height: 306px;
+
+    margin-left: 225px;
+    margin-top: 38px;
+    margin-right: 135px;
+    background-color: #f6f6f6;
+    border-radius: 16px;
+}
+
+.container h2 {
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+padding-top: 24px;
+padding-left: 22px;
+}

@@ -35,10 +35,7 @@
 </nav>
 <div class="container">
   <div class="col-left">
-    <div class="event-container">
-      <input type="text" placeholder="Create an event">
-      <button type="submit">Post Event</button>
-    </div>
+    <app-create-event></app-create-event>
     <div class="stats">
       <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
         alt="">
@@ -61,25 +58,5 @@
       </ul>
     </div>
 </div>
-<div class="col-mid">
-  <div class="post-event">
-    <div class="row">
-      <div class="col-2">
-        <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg" alt="" class="profile-img ">
-      </div>
-      <div class="col-10">
-        <input type="text"  placeholder="Write Something..." class="text-input" name="search">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-2">
-        <img src="/assets/images/Images.svg" alt="" class="photo-img">
-      </div>
-      <div class="col-10">
-        <input type="text" placeholder="Add Image Path" class="photo-input">
-        <button class="event-submit"><img src="assets/images/Send.svg" alt=""></button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<app-create-post></app-create-post>
+<app-upcoming-events></app-upcoming-events>
