@@ -1,0 +1,111 @@
+.container {
+    width: 278px;
+    height: 306px;
+    margin-top: 500px;
+    background-color: #f6f6f6;
+    position: relative;
+    border-radius: 16px;
+    right: 413px;
+}
+
+.container h2 {
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+padding-top: 24px;
+padding-left: 22px;
+}
+
+.people_list {
+    list-style: none;
+}
+
+.host_name {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.event-1 {
+    position: relative;
+    top: 20px;
+    right: 74px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.event-2 {
+    position: relative;
+    top: 20px;
+    right: 91px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.event-3 {
+    position: relative;
+    top: 20px;
+    right: 95px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.join-btn {
+    position: relative;
+    width: 64.93px;
+    position: relative;
+    height: 32px;
+    left: 150px;
+    top: -26px;
+    border-radius: 8px;
+    border: 1px solid #0C4195;
+    background: #FFFFFF;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #00ACFF;
+
+}
+
+.profile-img {
+    top: 9px;
+    width: 36.52px;
+    height: 40px;
+    border-radius: 16px;
+    position: relative;
+    right: 20px;
+}
+
+.people_list hr {
+    position: relative;
+    bottom: 10px;
+    margin: 5px -11px 0px -44px;
+}
+
+.see_all {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: #00ACFF;
+    margin-left: 69px;
+    position: relative;
+    bottom: 5px;
+}
