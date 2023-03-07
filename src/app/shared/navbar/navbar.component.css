@@ -2,8 +2,17 @@
     display: flex;
 }
 
+body {
+    background-color: #f6f6f6;
+}
+
+.container-fluid {
+    background-color: white;
+}
+
 .search-bar {
     border-radius: 18px;
+    background-color: #f6f6f6;
 }
 
 .up {
@@ -69,36 +78,16 @@ form button {
 }
 
 .col-left {
-    width: 26%;
-}
-
-.event-container input {
-    display: block;
-    width: 168px;
-    height: 74px;
-    border: none;
-    background: lavender;
-    margin-bottom: 1px solid white;
-    border-radius: 10px 10px 0px 0px;
-    margin-top: 67px;
-    text-align: center;
-}
-
-.event-container button {
-    width: 168px;
-    height: 41px;
-    outline: none;
-    border: none;
-    background: orange;
-    border-radius: 0px 0px 10px 10px;
-    margin-top: 1px solid white;
-    margin-top: 1px;
+    width: 18%;
 }
 
 .stats {
     width: 278px;
     height: 115px;
+    margin-left: 12px;
     margin-top: 62px;
+    border-radius: 16px;
+    margin-left: 2px;
 
 
     background: #F6F6;
@@ -107,16 +96,67 @@ form button {
 .stats img {
     width: 44px;
     height: 44px;
+    border-radius: 20px;
+    margin-left: 12px;
+    margin-top: 9px;
+}
+
+.stats_username {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    position: relative;
+    margin-left: 65px;
+    bottom: 25px;
+}
+
+.stats_description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: rgba(0, 0, 0, 0.46);
+    position: relative;
+    margin-left: 65px;
+    bottom: 37px;
+}
+
+.stats hr {
+    position: relative;
+    bottom: 90px;
 }
 
 .my_posts {
     width: 58px;
     height: 12px;
+        position: relative;
+        margin-left: 200px;
+        bottom: 88px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: blue;
 }
 
 .my_events {
     width: 58px;
     height: 12px;
+    position: relative;
+    margin-left: 200px;
+    bottom: 97px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: blue;
 }
 
 .hashtags {
@@ -124,7 +164,6 @@ form button {
     background: lightblue;
     width: 278px;
     height: 188px;
-    border-radius: 20px;
 }
 
 .hashtag_list {
@@ -133,7 +172,7 @@ form button {
 }
 
 .hashtags h2 {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -145,82 +184,19 @@ form button {
 }
 
 .hashtags li {
-    background: red;
+    background: lightgray;
     width: 61.35px;
     height: 22.7px;
     font-size: 12px;
     text-align: center;
     line-height: 150%;
     display: inline-block;
-    border-radius: 20px;
+    border-radius: 6px;
 }
 
 .hashtags hr {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-}
-
-.col-mid {
-    width: 33%;
-    display: flex;
-}
-
-.text-input {
-    width: 570px;
-    height: 107px;
-    border: none;
-    background: white;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.photo-input {
-    width: 493px;
-    height: 70px;
-    border-radius: 0px 0px 0px 10px;
-    border: none;
-    background: lightsalmon;
-
-    padding-left: 70px;
-}
-
-.event-submit {
-    width: 77px;
-    height: 70px;
-    border-radius: 0px 0px 10px 0px;
-    border: none;
-    position: relative;
-    bottom: 70px;
-    left: 493px;
-}
-
-.post-event img {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 12px;
-    left: 100px;
-    border-radius: 20px;
-}
-
- .photo-img {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 12px;
-    left: 100px;
-    border-radius: 20px;
-}
-
-.profile-img {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 12px;
-    left: 90px;
-    border-radius: 20px;
-}
-
-.placeholder { 
-    padding-left: 20px;
+    margin-top: 10px;
 }

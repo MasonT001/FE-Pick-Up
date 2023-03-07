@@ -24,28 +24,26 @@
           <img src="/assets/images/Profile.svg" alt="profile image">
         </li>
       </ul>
-    </div>
-    <div class="wrapper">
-      <form class="d-flex">
-        <input class="search-bar" type="search" placeholder="Search" aria-label="Search">
-        <button class="search-btn" type="submit">Search</button>
-      </form>
+      <div class="wrapper">
+        <form class="d-flex">
+          <input class="search-bar" type="search" placeholder="Search" aria-label="Search">
+          <button class="search-btn" type="submit">Search</button>
+        </form>
+      </div>
     </div>
   </div>
 </nav>
 <div class="container">
   <div class="col-left">
-    <div class="event-container">
-      <input type="text" placeholder="Create an event">
-      <button type="submit">Post Event</button>
-    </div>
+    <app-create-event></app-create-event>
     <div class="stats">
       <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
         alt="">
-      <p>Username</p>
-      <p>Description</p>
+      <p class="stats_username">Mason Trepagnier</p>
+      <p class="stats_description">Pro Fortnite Gamer</p>
       <p class="my_posts">My Posts: 10</p>
-        <p class="my_events">My Events: 8</p>
+      <p class="my_events">My Events: 8</p>
+      <hr>
     </div>
     <div class="hashtags">
       <h2>Followed Hashtags</h2>
@@ -60,25 +58,5 @@
       </ul>
     </div>
 </div>
-<div class="col-mid">
-  <div class="post-event">
-    <div class="row">
-      <div class="col-2">
-        <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg" alt="" class="profile-img ">
-      </div>
-      <div class="col-10">
-        <input type="text"  placeholder="Write Something..." class="text-input">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-2">
-        <img src="/assets/images/Images.svg" alt="" class="photo-img">
-      </div>
-      <div class="col-10">
-        <input type="text" placeholder="add image path" class="photo-input">
-        <button class="event-submit">Submit Post</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<app-create-post></app-create-post>
+<app-upcoming-events></app-upcoming-events>

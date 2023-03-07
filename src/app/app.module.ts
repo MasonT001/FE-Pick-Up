@@ -9,13 +9,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import { PymkComponent } from './pymk/pymk.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponentComponent,
     LoginComponentComponent,
     HomePageComponent,
-    NavbarComponent
+    NavbarComponent,
+    CreateEventComponent,
+    CreatePostComponent,
+    UpcomingEventsComponent,
+    PymkComponent
     
   ],
   imports: [
