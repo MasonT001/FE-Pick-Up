@@ -127,6 +127,11 @@ form button {
     border-radius: 20px;
 }
 
+.hashtag_list {
+    display: flex;
+    gap: 10px;
+}
+
 .hashtags h2 {
     font-family: 'Roboto';
     font-style: normal;
@@ -165,7 +170,7 @@ form button {
     width: 570px;
     height: 107px;
     border: none;
-    background: red;
+    background: white;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -175,6 +180,8 @@ form button {
     border-radius: 0px 0px 0px 10px;
     border: none;
     background: lightsalmon;
+
+    padding-left: 70px;
 }
 
 .event-submit {
@@ -183,14 +190,37 @@ form button {
     border-radius: 0px 0px 10px 0px;
     border: none;
     position: relative;
-    bottom: 12px;
+    bottom: 70px;
+    left: 493px;
 }
 
 .post-event img {
     width: 40px;
     height: 40px;
     position: relative;
-    top: 45px;
-    left: 5px;
+    top: 12px;
+    left: 100px;
     border-radius: 20px;
+}
+
+ .photo-img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 12px;
+    left: 100px;
+    border-radius: 20px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 12px;
+    left: 90px;
+    border-radius: 20px;
+}
+
+.placeholder { 
+    padding-left: 20px;
 }
