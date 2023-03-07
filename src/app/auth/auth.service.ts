@@ -7,6 +7,7 @@ import { UserService } from "./user.service";
 export class AuthService {
 
   loggedIn: boolean = false
+  
   constructor(private http: HttpClient, private router: Router, private userService: UserService) { }
 
   isLoggedIn() {

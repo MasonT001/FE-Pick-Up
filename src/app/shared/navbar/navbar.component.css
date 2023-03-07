@@ -164,6 +164,7 @@ form button {
     background: lightblue;
     width: 278px;
     height: 188px;
+    border-radius: 16px;
 }
 
 .hashtag_list {
