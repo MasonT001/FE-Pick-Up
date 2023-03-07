@@ -167,6 +167,7 @@ input.ng-invalid.ng-touched{
     align-items: center;
     border: none;
     border-bottom: 1px solid #A8A6A7;
+    outline: none;
 
     color: #a8a6a7;
 
@@ -181,6 +182,7 @@ input.ng-invalid.ng-touched{
     align-items: center;
     border: 0;
     border-bottom: 1px solid #A8A6A7;
+    outline: none;
 
     color: #a8a6a7;
 
@@ -254,7 +256,9 @@ h2 span {
 
     color: #56CCF2;
     text-align: center;
-    padding-left: 585px;
+    position: relative;
+    left: 290px;
+    bottom: 35px;
 }
 
 .skip {
