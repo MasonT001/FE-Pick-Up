@@ -1,4 +1,23 @@
-
 .navbar-nav .active {
     border-bottom: 1px solid rgba(0, 0, 0, 0.55);
   }
+
+.container {
+  display: flex;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+.col-left {
+  width: 18%;
+}
+
+/* .col-mid {
+  width: 33%;
+}
+
+.col-right {
+  width: 33%;
+} */

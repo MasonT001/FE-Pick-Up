@@ -21,7 +21,7 @@
           <img src="assets/images/Chat.svg" alt="chat image">
         </li>
         <li class="nav-item">
-          <img src="/assets/images/Profile.svg" alt="profile image">
+          <img src="/assets/images/Profile.svg" alt="profile image" routerLink="/my-profile">
         </li>
       </ul>
       <div class="wrapper">
@@ -30,34 +30,8 @@
           <button class="search-btn" type="submit">Search</button>
         </form>
       </div>
+      <button (click)="logoutUser()" class="logout-button btn btn-danger">Logout</button>
     </div>
   </div>
 </nav>
-<div class="container">
-  <div class="col-left">
-    <app-create-event></app-create-event>
-    <div class="stats">
-      <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
-        alt="">
-      <p class="stats_username">Mason Trepagnier</p>
-      <p class="stats_description">Pro Fortnite Gamer</p>
-      <p class="my_posts">My Posts: 10</p>
-      <p class="my_events">My Events: 8</p>
-      <hr>
-    </div>
-    <div class="hashtags">
-      <h2>Followed Hashtags</h2>
-      <hr />
-      <ul class="hashtag_list">
-        <li>
-          <p>#Gaming</p>
-        </li>
-        <li>
-          <p>#Fortnite</p>
-        </li>
-      </ul>
-    </div>
-</div>
-<app-create-post></app-create-post>
-<app-upcoming-events></app-upcoming-events>
-<app-pymk></app-pymk>
+

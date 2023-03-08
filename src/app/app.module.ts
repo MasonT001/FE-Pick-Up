@@ -13,6 +13,10 @@ import { CreateEventComponent } from './create-event/create-event.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { PymkComponent } from './pymk/pymk.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
+import { StatsComponent } from './stats/stats.component';
+import { HashtagsComponent } from './hashtags/hashtags.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,10 @@ import { PymkComponent } from './pymk/pymk.component';
     CreateEventComponent,
     CreatePostComponent,
     UpcomingEventsComponent,
-    PymkComponent
+    PymkComponent,
+    MyProfileComponent,
+    StatsComponent,
+    HashtagsComponent
     
   ],
   imports: [

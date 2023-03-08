@@ -2,10 +2,10 @@
     width: 278px;
     height: 306px;
 
-    margin-left: 225px;
+    margin-left: 160px;
     margin-top: 38px;
     margin-right: 135px;
-    background-color: #f6f6f6;
+    background-color: lightgrey;
     border-radius: 16px;
 }
 
@@ -34,7 +34,7 @@ padding-left: 22px;
 .event-1 {
     position: relative;
     top: 20px;
-    right: 74px;
+    right: 88px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 300;

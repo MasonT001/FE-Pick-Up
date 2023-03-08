@@ -1,6 +1,17 @@
 <div *ngIf="user">
   <app-navbar></app-navbar>
-  <div>
-      {{user.email}}
+  <div class="container">
+    <div class="col-left">
+      <app-create-event></app-create-event>
+      <app-stats></app-stats>
+      <app-hashtags></app-hashtags>
+    </div>
+    <div class="col-mid">
+      <app-create-post></app-create-post>
+    </div>
+    <div class="col-right">
+      <app-upcoming-events></app-upcoming-events>
+      <app-pymk></app-pymk>
+    </div>
   </div>
 </div>
