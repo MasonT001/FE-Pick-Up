@@ -1,0 +1,42 @@
+.hashtags {
+    margin-top: 58px;
+    background: lightgrey;
+    width: 278px;
+    height: 188px;
+    border-radius: 16px;
+}
+
+.hashtag_list {
+    display: flex;
+    gap: 10px;
+}
+
+.hashtags h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+        padding-top: 17.74px;
+        padding-left: 28.76px;
+
+}
+
+.hashtags li {
+    background: #E9F0F8;
+    width: 61.35px;
+    height: 22.7px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 150%;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.hashtags hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 10px;
+}

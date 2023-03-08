@@ -1,0 +1,77 @@
+.my_posts {
+    width: 58px;
+    height: 12px;
+        position: relative;
+        margin-left: 200px;
+        bottom: 88px;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: blue;
+}
+
+.my_events {
+    width: 58px;
+    height: 12px;
+    position: relative;
+    margin-left: 200px;
+    bottom: 97px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: blue;
+}
+
+.stats_username {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    position: relative;
+    margin-left: 65px;
+    bottom: 25px;
+}
+
+.stats_description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+
+    color: rgba(0, 0, 0, 0.46);
+    position: relative;
+    margin-left: 65px;
+    bottom: 37px;
+}
+
+.stats hr {
+    position: relative;
+    bottom: 90px;
+}
+
+.stats {
+    width: 278px;
+    height: 115px;
+    margin-left: 12px;
+    margin-top: 62px;
+    border-radius: 16px;
+    margin-left: 2px;
+
+
+    background: lightgrey;
+}
+
+.stats img {
+    width: 44px;
+    height: 44px;
+    border-radius: 20px;
+    margin-left: 12px;
+    margin-top: 9px;
+}

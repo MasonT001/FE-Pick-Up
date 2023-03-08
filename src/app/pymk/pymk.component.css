@@ -1,11 +1,13 @@
 .container {
     width: 278px;
     height: 306px;
-    margin-top: 500px;
-    background-color: #f6f6f6;
+    margin-top: 30px;
     position: relative;
     border-radius: 16px;
-    right: 413px;
+    left: 12px;
+    
+    background-color: lightgrey;
+
 }
 
 .container h2 {
@@ -30,7 +32,7 @@ padding-left: 22px;
     line-height: 19px;
 }
 
-.event-1 {
+.description-1 {
     position: relative;
     top: 20px;
     right: 74px;
@@ -41,7 +43,7 @@ padding-left: 22px;
     line-height: 13px;
 }
 
-.event-2 {
+.description-2 {
     position: relative;
     top: 20px;
     right: 91px;
@@ -52,7 +54,7 @@ padding-left: 22px;
     line-height: 13px;
 }
 
-.event-3 {
+.description-3 {
     position: relative;
     top: 20px;
     right: 95px;
