@@ -7,7 +7,7 @@ import { UserService } from "./user.service";
 export class AuthService {
 
   loggedIn: boolean = false
-  
+
   constructor(private http: HttpClient, private router: Router, private userService: UserService) { }
 
   isLoggedIn() {
@@ -45,5 +45,17 @@ export class AuthService {
       .subscribe((res) => {
         console.log(res);
       });
+  }
+
+  onGetUser() {
+    let auth_token = localStorage.getItem('tokenValue')
+    this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/users/me', {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
+    })
+    .subscribe((res: any) => {
+      console.log(res)
+    })
   }
 }
