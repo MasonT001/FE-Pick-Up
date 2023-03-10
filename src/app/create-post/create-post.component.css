@@ -70,3 +70,9 @@
 input#search {
     background-image: url('/assets/images/Search.svg');
 }
+
+.post-container {
+    width: 570px;
+    height: 518px;
+
+}

@@ -9,20 +9,18 @@ import { Post } from '../shared/post-model';
   styleUrls: ['./create-post.component.css']
 })
 export class CreatePostComponent implements OnInit {
-  posts: Post[] = []
-  inputValue: any;
+  // posts: Post[] = []
+  displayVal = ''
+  imageVal = ''
   constructor(private authService: AuthService, private postService: PostService) { }
 
   ngOnInit(): void {
   }
 
-  createPost(post: any) {
-    this.postService.onCreatePost(post)
-  }
-
-  handleInput(event: Event) {
-    this.inputValue = (event.target as HTMLInputElement).value;
-    console.log(this.inputValue)
+  createPost(val: string, imageVal: string) {
+    console.warn(val)
+    this.displayVal = val
+    this.imageVal = imageVal
   }
 
 }
