@@ -4,7 +4,7 @@
         <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg" alt="" class="profile-img ">
       </div>
       <div class="col-10">
-        <input type="text"  placeholder="Write Something..." class="text-input" name="search" (input)="handleInput($event)">
+        <input type="text"  placeholder="Write Something..." class="text-input" name="search" #box >
       </div>
     </div>
     <div class="row">
@@ -12,10 +12,11 @@
         <img src="/assets/images/Images.svg" alt="" class="photo-img">
       </div>
       <div class="col-10">
-        <input type="text" placeholder="Add Image Path" class="photo-input">
-        <button class="event-submit" (click)="createPost(posts)"><img src="assets/images/Send.svg" alt=""></button>
+        <input type="text" placeholder="Add Image Path" class="photo-input" #imageBox>
+        <button class="event-submit" (click)="createPost(box.value, imageBox.value)"><img src="assets/images/Send.svg" alt=""></button>
         <div class="post-container">
-            <div *ngFor="let post of posts">{{inputValue}}</div>
+            <p>Box value : {{displayVal}}</p>
+            <p>Image is : <img src="{{imageVal}}" alt=""></p>
         </div>
       </div>
     </div>
