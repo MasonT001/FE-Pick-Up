@@ -30,9 +30,5 @@ export class CreatePostComponent implements OnInit {
     console.log(this.postArray)
   }
 
-  deletePost() {
-    this.postArray.splice(0)
-    console.log(this.postArray)
-  }
 
 }

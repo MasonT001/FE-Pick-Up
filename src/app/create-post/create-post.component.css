@@ -76,9 +76,10 @@ input#search {
     height: 518px;
 
     position: relative;
-    left: 105px;
+    left: 98px;
     background: red;
     border-radius: 20px;
+    bottom: 90px;
 
 }
 
