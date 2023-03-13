@@ -75,4 +75,26 @@ input#search {
     width: 570px;
     height: 518px;
 
+    position: relative;
+    left: 105px;
+    background: red;
+    border-radius: 20px;
+
+}
+
+.description {
+    margin-top: 74px;
+    margin-left: 34px;
+}
+
+.post-img {
+    width: 44px;
+    height: 44px;
+}
+
+.newPost {
+    width: 570px;
+    display: flex;
+    height: 107px;
+    margin-left: 600px;
 }
