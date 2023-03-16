@@ -14,6 +14,9 @@ export class HomePageComponent implements OnInit {
   user: any = null
   posts: Post[] = []
   postEditValue: any
+
+  editImage = ''
+  editContent = ''
   ngOnInit(): void {
     this.userService.currentUserBehavioralSubject
     .subscribe((user) => {
@@ -25,6 +28,11 @@ export class HomePageComponent implements OnInit {
       this.posts = posts
     })
     this.posts = this.postService.currentUserPosts
+  }
+
+  submitEdit(editContent: string, editImage: string, id) {
+    console.log(editContent, editImage, id)
+    this.postEditValue = null
   }
 
 }
