@@ -56,6 +56,7 @@ export class AuthService {
     })
     .subscribe((res: any) => {
       console.log(res)
+      
     })
   }
 }

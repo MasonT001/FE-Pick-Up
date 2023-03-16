@@ -8,10 +8,18 @@
     </div>
     <div class="col-mid">
       <app-create-post></app-create-post>
-      <div *ngFor="let post of posts">
-        <span>{{post.imageAddress}}</span>
-        <span>{{post.postText}}</span>
-        <span>{{post.postID}}</span>
+      <div *ngFor="let post of posts; let i = index">
+        <div *ngIf="i === postEditValue; else content">
+          <form action="">
+            <input type="text">
+          </form>
+        </div>
+        <ng-template #content>
+          <span>{{post.imageAddress}}</span>
+          <button (click)="postEditValue = i">Edit</button>
+          <span>{{post.postText}}</span>
+          <!-- <span>{{post.postID}}</span> -->
+        </ng-template>
       </div>
     </div>
     <div class="col-right">

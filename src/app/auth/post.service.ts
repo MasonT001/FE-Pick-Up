@@ -19,4 +19,9 @@ export class PostService {
     this.currentUserPosts.push(post)
     this.currentUserPostsBS.next(this.currentUserPosts)
   }
+
+  deletePost() {
+    // this.currentUserPosts.filter(this.currentUserPosts,)
+  }
 }
+ 
