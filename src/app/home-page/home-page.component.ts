@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit {
   constructor(private userService: UserService, private postService: PostService) { }
   user: any = null
   posts: Post[] = []
+  postEditValue: any
   ngOnInit(): void {
     this.userService.currentUserBehavioralSubject
     .subscribe((user) => {
