@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, OnInit } from '@angular/core';
 import { PostService } from '../auth/post.service';
 import { UserService } from '../auth/user.service';
 import { Post } from '../shared/post-model';
@@ -33,6 +33,15 @@ export class HomePageComponent implements OnInit {
   submitEdit(editContent: string, editImage: string, id) {
     console.log(editContent, editImage, id)
     this.postEditValue = null
+    this.postService.updatePost({
+      c: editContent,
+      i: editImage
+    }, {
+      id: this.postEditValue 
+    }, {
+      index: this.postEditValue
+    })
+
   }
 
 }
