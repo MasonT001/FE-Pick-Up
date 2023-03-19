@@ -24,9 +24,10 @@ export class PostService {
     // this.currentUserPosts.filter(this.currentUserPosts,)
   }
 
-  updatePost(post, id, index) {
+  updatePost(post, id: any, index) {
     let i = 0;
     this.currentUserPosts[index] = post
+    this.currentUserPostsBS.next(this.currentUserPosts)
   }
 }
  
