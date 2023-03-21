@@ -21,7 +21,7 @@ export class PostService {
   }
 
   deletePost() {
-    // this.currentUserPosts.filter(this.currentUserPosts,)
+    // this.currentUserPosts.filter(this.currentUserPosts, this.)
   }
 
   updatePost(post, id: any, index) {

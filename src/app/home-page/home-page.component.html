@@ -10,16 +10,17 @@
       <app-create-post></app-create-post>
       <div *ngFor="let post of posts; let i = index">
         <div *ngIf="i === postEditValue; else content">
-          <form action="" onsubmit="submitEdit()">
+          <form>
             <input type="text" placeholder="Change Image" #editImage>
             <input type="text" placeholder="Change Content" #editContent>
             <button (click)="postEditValue = null" type="button">Cancel</button>
-            <button (click)="submitEdit(editImage.value, editContent.value, post.id)" type="button">Save</button>
+            <button (click)="submitEdit(editContent.value, editImage.value, post.id)" type="button">Save</button>
           </form>
         </div>
         <ng-template #content>
           <span>{{post.imageAddress}}</span>
           <button (click)="postEditValue = i">Edit</button>
+          <!-- <button class="btn btn-danger" (click)="">Delete</button> -->
           <span>{{post.postText}}</span>
           <!-- <span>{{post.postID}}</span> -->
         </ng-template>
