@@ -11,8 +11,8 @@
       <div *ngFor="let post of posts; let i = index">
         <div *ngIf="i === postEditValue; else content">
           <form>
-            <input type="text" placeholder="Change Image" #editImage>
-            <input type="text" placeholder="Change Content" #editContent>
+            <input type="text" placeholder="Change Image" #editImage value="{{post.imageAddress}}">
+            <input type="text" placeholder="Change Content" #editContent value="{{post.postText}}">
             <button (click)="postEditValue = null" type="button">Cancel</button>
             <button (click)="submitEdit(editContent.value, editImage.value, post.id)" type="button">Save</button>
           </form>

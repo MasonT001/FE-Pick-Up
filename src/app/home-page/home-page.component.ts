@@ -33,7 +33,6 @@ export class HomePageComponent implements OnInit {
   
   submitEdit(editImage, editContent, id) {
     console.log(editContent, editImage, id)
-    this.postEditValue = null
     this.postService.updatePost({
       c: editContent,
       i: editImage
@@ -41,7 +40,10 @@ export class HomePageComponent implements OnInit {
       id: this.postEditValue
     }, {
       index: this.postEditValue
-    })
+    }
+    );
+    this.postEditValue = null
+    console.log(this.postService.currentUserPosts[this.postEditValue])
     
 }
 
