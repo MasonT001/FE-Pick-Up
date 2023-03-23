@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Post } from '../shared/post-model';
 
 @Injectable({
@@ -21,13 +21,14 @@ export class PostService {
   }
 
   deletePost() {
-    // this.currentUserPosts.filter(this.currentUserPosts, this.)
+    // this.currentUserPosts.filter()
   }
 
   updatePost(post, id: any, index) {
     let i = 0;
     this.currentUserPosts[index] = post
     this.currentUserPostsBS.next(this.currentUserPosts)
+    return post
   }
 }
  

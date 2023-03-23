@@ -43,8 +43,7 @@ export class HomePageComponent implements OnInit {
     }
     );
     this.postEditValue = null
-    console.log(this.postService.currentUserPosts[this.postEditValue])
-    
+
 }
 
 }
