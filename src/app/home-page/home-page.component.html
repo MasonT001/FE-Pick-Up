@@ -18,10 +18,10 @@
           </form>
         </div>
         <ng-template #content>
-          <span>{{post.imageAddress}}</span>
+          <span>{{post?.imageAddress}}</span>
           <button (click)="postEditValue = i">Edit</button>
           <!-- <button class="btn btn-danger" (click)="">Delete</button> -->
-          <span>{{post.postText}}</span>
+          <span>{{post?.postText}}</span>
           <!-- <span>{{post.postID}}</span> -->
         </ng-template>
       </div>
