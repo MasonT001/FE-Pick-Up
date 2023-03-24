@@ -43,7 +43,9 @@ export class HomePageComponent implements OnInit {
     }
     );
     this.postEditValue = null
-
+    this.postService.currentUserPosts[id] = new Post(editContent, editImage, id)
+    this.postService.currentUserPostsBS.next(this.postService.currentUserPosts)
+    console.log(this.postService.currentUserPosts)
 }
 
 }
