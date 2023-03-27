@@ -47,5 +47,9 @@ export class HomePageComponent implements OnInit {
     this.postService.currentUserPostsBS.next(this.postService.currentUserPosts)
     console.log(this.postService.currentUserPosts)
 }
+  // deletePost(index) {
+  //   this.postEditValue = index
+  //   this.postService.deletePost(index)
+  // }
 
 }
