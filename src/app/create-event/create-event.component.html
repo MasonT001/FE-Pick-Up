@@ -1,4 +1,29 @@
 <div class="event-container">
-    <input type="text" placeholder="Create an event">
-    <button type="submit">Post Event</button>
+    <button (click)="createEvent()">Create Event</button>
   </div>
+  <div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Create An Event</h4>
+      </div>
+      <div class="modal-body">
+        <input type="text" placeholder="Title" class="title" #title>
+        <input type="text" placeholder="Description" #desc>
+        <label class="start-date">Start Date & Time</label>
+        <input type="datetime-local" class="sdt-input" #sdt>
+        <label class="label edt">End Date & Time</label>
+        <input type="datetime-local" class="edt-input" #edt>
+        <input class="loc-inp" type="text" placeholder="Location" #location>
+        <input type="number" placeholder="Spots Available" #spots>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="submitEvent(title.value, desc.value, sdt.value, edt.value, location.value, spots.value)">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

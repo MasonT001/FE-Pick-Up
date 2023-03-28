@@ -21,7 +21,6 @@ export class CreatePostComponent implements OnInit {
     this.displayVal = val
     this.imageVal = imageVal
     this.postService.addPost(new Post(imageVal, val, 1))
-    console.log()
   }
 
   editPost() {

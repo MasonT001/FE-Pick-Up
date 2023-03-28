@@ -6,8 +6,13 @@ import { Event } from '../shared/event-model';
   providedIn: 'root'
 })
 export class EventService {
-  currentUserEvents: Event[] = [new Event('Neosho, MO', '12:30', 10)]
+  currentUserEvents: Event[] = [new Event('Sunday Football', 'lorem ipsem', '03/27/23', '03/27/23', 'Morris Park', '10', 0)]
   currentUserEventsBS: BehaviorSubject<any> = new BehaviorSubject(null)
 
   constructor() { }
+
+  addEvent(event: any) {
+    this.currentUserEvents.push(event)
+    this.currentUserEventsBS.next(this.currentUserEvents)
+  }
 }
