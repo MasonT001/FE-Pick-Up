@@ -2,25 +2,41 @@
     margin-left: 47px;
 }
 
-.event-container input {
+.event-container button {
     display: block;
     width: 168px;
     height: 74px;
     border: none;
     background: lavender;
     margin-bottom: 1px solid white;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
     margin-top: 67px;
     text-align: center;
+    color: #FFFFFF;
 }
 
-.event-container button {
-    width: 168px;
-    height: 41px;
-    outline: none;
-    border: none;
-    background: orange;
-    border-radius: 0px 0px 10px 10px;
-    margin-top: 1px solid white;
-    margin-top: 1px;
+.title {
+    margin-right: 90px;
+}
+
+.start-date {
+    margin-right: 7px;
+}
+
+.sdt-input {
+    margin-top: 10px;
+}
+
+.label {
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.edt-input {    
+    margin-top: 10px;
+}
+
+.loc-inp {
+    margin-right: 90px;
+    margin-top: 10px;
 }

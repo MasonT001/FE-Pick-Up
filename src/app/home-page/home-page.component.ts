@@ -1,7 +1,9 @@
 import { Component, ContentChild, OnInit } from '@angular/core';
 import { PostService } from '../auth/post.service';
 import { UserService } from '../auth/user.service';
+import { Event } from '../shared/event-model';
 import { Post } from '../shared/post-model';
+import { EventService } from '../auth/event.service';
 
 @Component({
   selector: 'app-home-page',
@@ -10,10 +12,13 @@ import { Post } from '../shared/post-model';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private userService: UserService, private postService: PostService) { }
+  constructor(private userService: UserService, private postService: PostService, private eventService: EventService) { }
   user: any = null
   posts: Post[] = []
   postEditValue: any
+
+  events: Event[] = []
+  eventEditValue: any
 
   editImage = ''
   editContent = ''
@@ -28,6 +33,12 @@ export class HomePageComponent implements OnInit {
       this.posts = posts
     })
     this.posts = this.postService.currentUserPosts
+
+    this.eventService.currentUserEventsBS
+    .subscribe((events) => {
+      this.events = events
+    })
+    this.events = this.eventService.currentUserEvents
   }
 
   
@@ -47,9 +58,8 @@ export class HomePageComponent implements OnInit {
     this.postService.currentUserPostsBS.next(this.postService.currentUserPosts)
     console.log(this.postService.currentUserPosts)
 }
-  // deletePost(index) {
-  //   this.postEditValue = index
-  //   this.postService.deletePost(index)
-  // }
+  deletePost(id) {
+    this.postService.deletePost(id)
+  }
 
 }

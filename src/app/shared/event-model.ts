@@ -1,3 +1,3 @@
 export class Event {
-    constructor(public location: string, public time: string, public playerCount: number) { }
+    constructor(public title: string, public description: string, public startDate: string, public endDate: string, public location: string, public spotsAvailable: string, public id: number) { }
 }

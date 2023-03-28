@@ -20,11 +20,12 @@ export class PostService {
     this.currentUserPostsBS.next(this.currentUserPosts)
   }
 
-  // deletePost(index) {
-  //   return this.currentUserPosts.filter((post) => {
-  //     return post.id === index
-  //   })
-  // }
+  deletePost(id) {
+    this.currentUserPosts = this.currentUserPosts.filter((post) => {
+      return post.id !== id
+    })
+    this.currentUserPostsBS.next(this.currentUserPosts)
+  }
 
   updatePost(post, id: any, index) {
     let i = 0;
