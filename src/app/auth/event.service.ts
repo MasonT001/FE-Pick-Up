@@ -14,5 +14,6 @@ export class EventService {
   addEvent(event: any) {
     this.currentUserEvents.push(event)
     this.currentUserEventsBS.next(this.currentUserEvents)
+    console.log(this.currentUserEvents)
   }
 }

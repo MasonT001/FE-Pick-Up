@@ -25,6 +25,27 @@
           <!-- <span>{{post.postID}}</span> -->
         </ng-template>
       </div>
+      <div *ngFor="let event of events; let i = index">
+        <div *ngIf="i === eventEditValue; else content">
+          <form>
+            <input type="text" placeholder="Change Image" #editImage>
+            <input type="text" placeholder="Change Content" #editContent>
+            <button (click)="eventEditValue = null" type="button">Cancel</button>
+            <button type="button">Save</button>
+          </form>
+        </div>
+        <ng-template #content>
+          <span>{{event.title}}</span>
+          <button (click)="eventEditValue = i">Edit</button>
+          <button class="btn btn-danger">Delete</button>
+          <span>{{event.description}}</span>
+          <span>{{event.startDate}}</span>
+          <span>{{event.endDate}}</span>
+          <span>{{event.location}}</span>
+          <span>{{event.spotsAvailable}}</span>
+          <!-- <span>{{post.postID}}</span> -->
+        </ng-template>
+      </div>
     </div>
     <div class="col-right">
       <app-upcoming-events></app-upcoming-events>
