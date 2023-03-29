@@ -11,16 +11,18 @@
       <div class="modal-header">
         <h4 class="modal-title">Create An Event</h4>
       </div>
-      <div class="modal-body">
-        <input type="text" placeholder="Title" class="title" #title>
-        <input type="text" placeholder="Description" #desc>
-        <label class="start-date">Start Date & Time</label>
-        <input type="datetime-local" class="sdt-input" #sdt>
-        <label class="label edt">End Date & Time</label>
-        <input type="datetime-local" class="edt-input" #edt>
-        <input class="loc-inp" type="text" placeholder="Location" #location>
-        <input type="number" placeholder="Spots Available" #spots>
-      </div>
+      <form action="" name="modal-form">
+          <div class="modal-body">
+            <input type="text" placeholder="Title" class="title" #title>
+            <input type="text" placeholder="Description" #desc>
+            <label class="start-date">Start Date & Time</label>
+            <input type="datetime-local" class="sdt-input" #sdt>
+            <label class="label edt">End Date & Time</label>
+            <input type="datetime-local" class="edt-input" #edt>
+            <input class="loc-inp" type="text" placeholder="Location" #location>
+            <input type="number" placeholder="Spots Available" #spots>
+          </div>
+      </form>
       <div class="modal-footer">
         <button type="button" class="btn btn-success" (click)="submitEvent(title.value, desc.value, sdt.value, edt.value, location.value, spots.value)">Submit</button>
       </div>

@@ -35,9 +35,9 @@ export class CreateEventComponent implements OnInit {
     this.edt = edt
     this.location = location
     this.spots = spots
-    this.eventService.addEvent(new Event(title, desc, sdt, edt, location, spots, 0))
+    this.eventService.addEvent(new Event(title, desc, sdt, edt, location, spots, this.id))
     
-    console.log(title, desc, sdt, edt, location, spots)
+    console.log(title, desc, sdt, edt, location, spots, this.id)
   }
 
 }
