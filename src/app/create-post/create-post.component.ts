@@ -15,20 +15,9 @@ export class CreatePostComponent implements OnInit {
 
   constructor(private authService: AuthService, private postService: PostService, private http: HttpClient) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   createPost(val: string, imageVal: string) {
-    let auth_token = localStorage.getItem('tokenValue')
-    this.displayVal = val
-    this.imageVal = imageVal
-    // this.postService.addPost(new Post(imageVal, val, 1))
-    this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/posts', {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${auth_token}`
-      })
-    }).subscribe((res) => {
-      console.log(res)
-    })
+    this.postService.createPost(val, imageVal)
   }
 }

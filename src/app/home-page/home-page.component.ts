@@ -25,18 +25,21 @@ export class HomePageComponent implements OnInit {
   editContent = ''
   ngOnInit(): void {
     this.userService.currentUserBehavioralSubject
-    .subscribe((user) => {
-      this.user = user
-      console.log(user)
-    })
+      .subscribe((user) => {
+        this.user = user
+        console.log(user)
+      })
     let auth_token = localStorage.getItem('tokenValue')
-    this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/posts/home', {headers: new HttpHeaders({
-      'Authorization': `Bearer ${auth_token}`
-    })})
-    .subscribe((posts: any) => {
-      console.log(posts)
-      this.posts = posts
+    this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/posts/home', {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
     })
+      .subscribe((posts: any) => {
+        console.log(posts.payload)
+
+        this.posts = posts
+      })
 
     this.posts = this.postService.currentUserPosts
 
@@ -46,31 +49,39 @@ export class HomePageComponent implements OnInit {
     // this.posts = this.postService.currentUserPosts
 
     this.eventService.currentUserEventsBS
-    .subscribe((events) => {
-      this.events = events
-    })
+      .subscribe((events) => {
+        this.events = events
+      })
     this.events = this.eventService.currentUserEvents
   }
 
-  
+
   submitEdit(editImage, editContent, id) {
-    console.log(editContent, editImage, id)
-    this.postService.updatePost({
-      c: editContent,
-      i: editImage
-    }, {
-      id: this.postEditValue
-    }, {
-      index: this.postEditValue
-    }
-    );
-    this.postEditValue = null
-    this.postService.currentUserPosts[id] = new Post(editContent, editImage, id)
-    this.postService.currentUserPostsBS.next(this.postService.currentUserPosts)
-    console.log(this.postService.currentUserPosts)
-}
+    // console.log(editContent, editImage, id)
+    // this.postService.updatePost({
+    //   c: editContent,
+    //   i: editImage
+    // }, {
+    //   id: this.postEditValue
+    // }, {
+    //   index: this.postEditValue
+    // }
+    // );
+    // this.postEditValue = null
+    // this.postService.currentUserPosts[id] = new Post(editContent, editImage, id)
+    // this.postService.currentUserPostsBS.next(this.postService.currentUserPosts)
+    // console.log(this.postService.currentUserPosts)
+
+    this.postService.updatePost(editContent, id, this.postEditValue)
+  }
+
+
   deletePost(id) {
     this.postService.deletePost(id)
+  }
+
+  deleteEvent(id) {
+    this.eventService.deleteEvent(id)
   }
 
 }
