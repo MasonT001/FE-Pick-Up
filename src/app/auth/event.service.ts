@@ -16,4 +16,11 @@ export class EventService {
     this.currentUserEventsBS.next(this.currentUserEvents)
     console.log(this.currentUserEvents)
   }
+
+  deleteEvent(id) {
+    this.currentUserEvents.filter((event) => {
+      return event.id !== id
+    })
+    this.currentUserEventsBS.next(this.currentUserEvents)
+  }
 }

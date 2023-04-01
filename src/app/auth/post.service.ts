@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Post } from '../shared/post-model';
@@ -6,9 +7,9 @@ import { Post } from '../shared/post-model';
   providedIn: 'root'
 })
 export class PostService {
-  currentUserPosts: Post[] = [new Post('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJIvPXPFZs2jSHcQn6K7IbEba53D_hdRbqg&usqp=CAU', 'A beautiful bonsai tree', 0), new Post('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fuji-and-sakura-royalty-free-image-144483163-1562593125.jpg?crop=1.00xw:0.752xh;0,0.236xh&resize=1200:*', 'Some pretty Sakuras', 1)]
+  currentUserPosts: Post[] = []
   currentUserPostsBS: BehaviorSubject<any> = new BehaviorSubject(null)
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   setPosts(currentUserPosts: Post[]) {
     this.currentUserPosts = currentUserPosts
@@ -16,21 +17,55 @@ export class PostService {
   }
 
   addPost(post: any) {
-    this.currentUserPosts.push(post)
-    this.currentUserPostsBS.next(this.currentUserPosts)
+    // this.currentUserPosts.push(post)
+    // this.currentUserPostsBS.next(this.currentUserPosts)
+  }
+
+  createPost(val: string, imageVal: string) {
+    let auth_token = localStorage.getItem('tokenValue')
+    // this.postService.addPost(new Post(imageVal, val, 1))
+    this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/posts', {
+      "image_path": imageVal,
+      "content": val
+    }, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
+    }).subscribe((post: any) => {
+      Object.values(post)
+      console.log(post)
+    })
   }
 
   deletePost(id) {
-    this.currentUserPosts = this.currentUserPosts.filter((post) => {
-      return post.id !== id
+    // this.currentUserPosts = this.currentUserPosts.filter((post) => {
+    //   return post.id !== id
+    // })
+    // this.currentUserPostsBS.next(this.currentUserPosts)
+    let auth_token = localStorage.getItem('tokenValue')
+    this.http.delete('https://pick-up-sports-api.herokuapp.com/api/v1/posts/1', {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
     })
-    this.currentUserPostsBS.next(this.currentUserPosts)
   }
 
   updatePost(post, id: any, index) {
-    let i = 0;
-    this.currentUserPosts[index] = post
-    this.currentUserPostsBS.next(this.currentUserPosts)
+    // let i = 0;
+    // this.currentUserPosts[index] = post
+    // this.currentUserPostsBS.next(this.currentUserPosts)
+    let auth_token = localStorage.getItem('tokenValue')
+
+    this.http.put('https://pick-up-sports-api.herokuapp.com/api/v1/posts/1', {
+      "image_path": post,
+      "content": post
+    }, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
+    }).subscribe((update: any) => {
+      console.log(update)
+    })
   }
 }
- 
+
