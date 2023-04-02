@@ -1,3 +1,5 @@
+// Live share is slow for me I will pull this down and inspect it, give me 5 minutes
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -38,22 +40,17 @@ export class PostService {
   }
 
   deletePost(id) {
-    // this.currentUserPosts = this.currentUserPosts.filter((post) => {
-    //   return post.id !== id
-    // })
-    // this.currentUserPostsBS.next(this.currentUserPosts)
     let auth_token = localStorage.getItem('tokenValue')
     this.http.delete('https://pick-up-sports-api.herokuapp.com/api/v1/posts/1', {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${auth_token}`
       })
+    }).subscribe((res: any) => {
+      console.log(res)
     })
   }
 
   updatePost(post, id: any, index) {
-    // let i = 0;
-    // this.currentUserPosts[index] = post
-    // this.currentUserPostsBS.next(this.currentUserPosts)
     let auth_token = localStorage.getItem('tokenValue')
 
     this.http.put('https://pick-up-sports-api.herokuapp.com/api/v1/posts/1', {
