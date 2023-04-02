@@ -35,13 +35,13 @@ export class HomePageComponent implements OnInit {
         'Authorization': `Bearer ${auth_token}`
       })
     })
-      .subscribe((posts: any) => {
-        console.log(posts.payload)
+      .subscribe((res: any) => {
+        console.log(res.payload)
 
-        this.posts = posts
+        this.posts = res.payload
+        console.log(this.posts)
+
       })
-
-    this.posts = this.postService.currentUserPosts
 
     // this.postService.currentUserPostsBS.subscribe((posts) => {
     //   this.posts = posts
@@ -57,22 +57,8 @@ export class HomePageComponent implements OnInit {
 
 
   submitEdit(editImage, editContent, id) {
-    // console.log(editContent, editImage, id)
-    // this.postService.updatePost({
-    //   c: editContent,
-    //   i: editImage
-    // }, {
-    //   id: this.postEditValue
-    // }, {
-    //   index: this.postEditValue
-    // }
-    // );
-    // this.postEditValue = null
-    // this.postService.currentUserPosts[id] = new Post(editContent, editImage, id)
-    // this.postService.currentUserPostsBS.next(this.postService.currentUserPosts)
-    // console.log(this.postService.currentUserPosts)
-
     this.postService.updatePost(editContent, id, this.postEditValue)
+    this.postEditValue = null
   }
 
 

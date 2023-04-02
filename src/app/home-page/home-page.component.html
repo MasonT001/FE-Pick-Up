@@ -11,20 +11,22 @@
       <div *ngFor="let post of posts; let i = index">
         <div *ngIf="i === postEditValue; else content">
           <form>
-            <input type="text" placeholder="Change Image" #editImage value="{{post.imageAddress}}">
-            <input type="text" placeholder="Change Content" #editContent value="{{post.postText}}">
+            <input type="text" placeholder="Change Image" #editImage value="{{post.image_path}}">
+            <input type="text" placeholder="Change Content" #editContent value="{{post.content}}">
             <button (click)="postEditValue = null" type="button">Cancel</button>
             <button (click)="submitEdit(editContent.value, editImage.value, post.id)" type="button">Save</button>
           </form>
         </div>
         <ng-template #content>
-          <!-- <span>{{post?.}}</span> -->
+          <span>{{post.content}}</span>
           <button (click)="postEditValue = i">Edit</button>
           <button class="btn btn-danger" (click)="deletePost(post.id)">Delete</button>
-          <!-- <span>{{post?.content}}</span> -->
-          <!-- <span>{{post.postID}}</span> -->
+          <!-- <img src="{{post.image_path}}" alt=""> -->
         </ng-template>
       </div>
+
+
+
       <div *ngFor="let event of events; let i = index">
         <div *ngIf="i === eventEditValue; else content">
           <form>
@@ -43,7 +45,6 @@
           <span>{{event.endDate}}</span>
           <span>{{event.location}}</span>
           <span>{{event.spotsAvailable}}</span>
-          <!-- <span>{{post.postID}}</span> -->
         </ng-template>
       </div>
     </div>
