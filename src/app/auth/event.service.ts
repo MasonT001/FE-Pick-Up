@@ -18,9 +18,14 @@ export class EventService {
   }
 
   deleteEvent(id) {
-    this.currentUserEvents.filter((event) => {
+    this.currentUserEvents = this.currentUserEvents.filter((event) => {
       return event.id !== id
     })
+    this.currentUserEventsBS.next(this.currentUserEvents)
+  }
+
+  updateEvent(event, id, index) {
+    this.currentUserEvents[index] = event
     this.currentUserEventsBS.next(this.currentUserEvents)
   }
 }

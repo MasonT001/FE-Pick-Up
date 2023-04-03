@@ -43,10 +43,10 @@ export class HomePageComponent implements OnInit {
 
       })
 
-    // this.postService.currentUserPostsBS.subscribe((posts) => {
-    //   this.posts = posts
-    // })
-    // this.posts = this.postService.currentUserPosts
+    this.postService.currentUserPostsBS.subscribe((posts) => {
+      this.posts = posts
+    })
+    this.posts = this.postService.currentUserPosts
 
     this.eventService.currentUserEventsBS
       .subscribe((events) => {
@@ -68,6 +68,21 @@ export class HomePageComponent implements OnInit {
 
   deleteEvent(id) {
     this.eventService.deleteEvent(id)
+  }
+
+  updateEvent(editImage, editContent, id) {
+    this.eventService.updateEvent({
+      c: editContent,
+      i: editImage
+    }, {
+      id: id
+    }, {
+      index: this.eventEditValue
+    }
+    );
+    this.postEditValue = null
+    // this.eventService.currentUserEvents[id] = new Event(editContent, editImage, id)
+
   }
 
 }
