@@ -18,14 +18,8 @@ export class PostService {
     this.currentUserPostsBS.next(currentUserPosts)
   }
 
-  addPost(post: any) {
-    // this.currentUserPosts.push(post)
-    // this.currentUserPostsBS.next(this.currentUserPosts)
-  }
-
   createPost(val: string, imageVal: string) {
     let auth_token = localStorage.getItem('tokenValue')
-    // this.postService.addPost(new Post(imageVal, val, 1))
     this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/posts', {
       "image_path": imageVal,
       "content": val
@@ -33,27 +27,31 @@ export class PostService {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${auth_token}`
       })
-    }).subscribe((post: any) => {
-      Object.values(post)
-      console.log(post)
+    }).subscribe((res: any) => {
+      console.log(res.payload.post)
+      this.currentUserPosts.push(res.payload.post)
+     this.currentUserPostsBS.next(this.currentUserPosts)
     })
   }
 
   deletePost(id) {
     let auth_token = localStorage.getItem('tokenValue')
-    this.http.delete('https://pick-up-sports-api.herokuapp.com/api/v1/posts/1', {
+    this.http.delete(`https://pick-up-sports-api.herokuapp.com/api/v1/posts/${id}`, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${auth_token}`
       })
     }).subscribe((res: any) => {
       console.log(res)
+      this.currentUserPosts = this.currentUserPosts.filter((post) => {
+        return post.id !== id
+      })
+      this.currentUserPostsBS.next(this.currentUserPosts)
     })
   }
 
   updatePost(post, id: any, index) {
     let auth_token = localStorage.getItem('tokenValue')
-
-    this.http.put('https://pick-up-sports-api.herokuapp.com/api/v1/posts/1', {
+    this.http.put(`https://pick-up-sports-api.herokuapp.com/api/v1/posts/${id}`, {
       "image_path": post,
       "content": post
     }, {
@@ -62,6 +60,7 @@ export class PostService {
       })
     }).subscribe((update: any) => {
       console.log(update)
+      this.currentUserPostsBS.next(this.currentUserPosts)
     })
   }
 }
