@@ -40,8 +40,15 @@ export class HomePageComponent implements OnInit {
 
         this.posts = res.payload
         console.log(this.posts)
-
       })
+
+    this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/events/1', {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
+    }).subscribe((res: any) => {
+      this.events = res.payload
+    })
 
     this.postService.currentUserPostsBS.subscribe((posts) => {
       this.posts = posts
@@ -70,10 +77,15 @@ export class HomePageComponent implements OnInit {
     this.eventService.deleteEvent(id)
   }
 
-  updateEvent(editImage, editContent, id) {
+  updateEvent(editImage, editTitle, editDescription, editStartDate, editEndDate, editLocation, editSpots, id) {
     this.eventService.updateEvent({
-      c: editContent,
-      i: editImage
+      t: editTitle,
+      i: editImage,
+      d: editDescription,
+      sd: editStartDate,
+      ed: editEndDate,
+      el: editLocation,
+      es: editSpots
     }, {
       id: id
     }, {
