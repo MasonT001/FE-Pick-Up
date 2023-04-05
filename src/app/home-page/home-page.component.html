@@ -23,7 +23,6 @@
             <span>{{post.image_path}}</span>
             <button (click)="postEditValue = i">Edit</button>
             <button class="btn btn-danger" (click)="deletePost(post.id)">Delete</button>
-            <!-- <img src="{{post.image_path}}" alt=""> -->
           </div>
         </ng-template>
       </div>
@@ -34,9 +33,14 @@
         <div *ngIf="i === eventEditValue; else content">
           <form>
             <input type="text" placeholder="Change Image" #editImage>
-            <input type="text" placeholder="Change Content" #editContent>
+            <input type="text" placeholder="Change Title" #editTitle>
+            <input type="text" placeholder="Change Description" #editDescription>
+            <input type="text" placeholder="Change Start Date" #editStartDate>
+            <input type="text" placeholder="Change End Date" #editEndDate>
+            <input type="text" placeholder="Change Location" #editLocation>
+            <input type="text" placeholder="Change Spots Available" #editSpots>
             <button (click)="eventEditValue = null" type="button">Cancel</button>
-            <button type="button" (click)="updateEvent(editContent.value, editImage.value, event.id)">Save</button>
+            <button type="button" (click)="updateEvent(editTitle.value, editDescription.value, editImage.value, editStartDate.value, editEndDate.value, editLocation.value, editSpots.value ,event.id)">Save</button>
           </form>
         </div>
         <ng-template #content>
