@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { identifierName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '../auth/event.service';
 import { Event } from '../shared/event-model';
 
 @Component({
@@ -10,7 +12,7 @@ import { Event } from '../shared/event-model';
 export class MyEventsComponent implements OnInit {
 
   myEvents: Event[] = []
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private eventService: EventService) { }
 
   ngOnInit(): void {
       let auth_token = localStorage.getItem('tokenValue')
@@ -21,6 +23,14 @@ export class MyEventsComponent implements OnInit {
       }).subscribe((res: any) => {
         this.myEvents = res.payload
       })
+
+
+      this.eventService.currentUserEventsBS.subscribe((events) => {
+        this.myEvents = events
+      })
     }
 
+    deleteEvent(id) {
+      this.eventService.deleteEvent(id)
+    }
 }

@@ -3,4 +3,30 @@
     <button (click)="onGetUser()">Get User Info</button>
     <div class="profile-header"></div>
     <button routerLink="/my-events">My events</button>
+
+    <div *ngFor="let event of events; let i = index">
+        <div *ngIf="i === eventEditValue; else content">
+          <form>
+            <input type="text" placeholder="Change Image" #editImage>
+            <input type="text" placeholder="Change Title" #editTitle>
+            <input type="text" placeholder="Change Description" #editDescription>
+            <input type="text" placeholder="Change Start Date" #editStartDate>
+            <input type="text" placeholder="Change End Date" #editEndDate>
+            <input type="text" placeholder="Change Location" #editLocation>
+            <input type="text" placeholder="Change Spots Available" #editSpots>
+            <button (click)="eventEditValue = null" type="button">Cancel</button>
+            <button type="button" (click)="updateEvent(editTitle.value, editDescription.value, editImage.value, editStartDate.value, editEndDate.value, editLocation.value, editSpots.value ,event.id)">Save</button>
+          </form>
+        </div>
+        <ng-template #content>
+          <span>{{event.title}}</span>
+          <button (click)="eventEditValue = i">Edit</button>
+          <button class="btn btn-danger" (click)="deleteEvent(event.id)">Delete</button>
+          <span>{{event.description}}</span>
+          <span>{{event.startDate}}</span>
+          <span>{{event.endDate}}</span>
+          <span>{{event.location}}</span>
+          <span>{{event.spotsAvailable}}</span>
+        </ng-template>
+      </div>
 </div>

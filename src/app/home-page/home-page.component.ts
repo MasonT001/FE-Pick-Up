@@ -36,19 +36,9 @@ export class HomePageComponent implements OnInit {
       })
     })
       .subscribe((res: any) => {
-        console.log(res.payload)
-
         this.posts = res.payload
         console.log(this.posts)
       })
-
-    this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/events/1', {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${auth_token}`
-      })
-    }).subscribe((res: any) => {
-      this.events = res.payload
-    })
 
     this.postService.currentUserPostsBS.subscribe((posts) => {
       this.posts = posts

@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../auth/event.service';
 import { Event } from '../shared/event-model';
@@ -9,7 +10,7 @@ import { Event } from '../shared/event-model';
 })
 export class CreateEventComponent implements OnInit {
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private http: HttpClient) { }
   title = ''
   desc = ''
   sdt = ''
@@ -36,7 +37,7 @@ export class CreateEventComponent implements OnInit {
     this.location = location
     this.spots = spots
     this.eventService.addEvent(new Event(title, desc, sdt, edt, location, spots, this.id))
-    
+
     console.log(title, desc, sdt, edt, location, spots, this.id)
   }
 
