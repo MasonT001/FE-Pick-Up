@@ -28,6 +28,12 @@
             ">Please enter your last name</span>
                 </div>
                 <div class="form-group">
+                    <input class="signup-input-username" formControlName="username" type="text" placeholder="Username"
+                        id="username">
+                    <span class="help-block"
+                        *ngIf="!signupForm.get('userData.username')?.valid && signupForm.get('userData.username')?.touched">Please enter your username</span>
+                </div>
+                <div class="form-group">
                     <input class="signup-input-phone form-control" formControlName="phone" type="text"
                         placeholder="Phone Number" id="phone" />
                     <span class="help-block" *ngIf="

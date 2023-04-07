@@ -20,6 +20,7 @@ export class SignupComponentComponent implements OnInit{
       'userData': new FormGroup({
         'first_name': new FormControl(null, Validators.required),
         'last_name': new FormControl(null, Validators.required),
+        'username': new FormControl(null, Validators.required),
         'email': new FormControl(null, [Validators.required, Validators.email]),
         'phone': new FormControl(null, Validators.required),
         'password': new FormControl(null, [Validators.required, Validators.minLength(8)]),
@@ -32,7 +33,4 @@ export class SignupComponentComponent implements OnInit{
     this.authService.onUserCreated(user)
   }
 
-  // onSubmit() {
-  //   console.log(this.signupForm)
-  // }
 }
