@@ -150,7 +150,6 @@ h1 {
   width: 100%;
   padding-bottom: 16px;
   max-width: 418.1px;
-  /* center input */
   margin: 0 auto;
 }
 
@@ -169,6 +168,17 @@ input.ng-invalid.ng-touched{
   border: none;
   border-bottom: 1px solid #a8a6a7;
 
+  color: #a8a6a7;
+}
+
+.signup-input-username {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  border: 0;
+  border-bottom: 1px solid #a8a6a7;
   color: #a8a6a7;
 }
 
@@ -196,10 +206,6 @@ input.ng-invalid.ng-touched{
   color: #a8a6a7;
 }
 
-/* .signup-input-fn:focus {
-  outline: 1px solid green;
-  border-bottom: none;
-} */
 
 .signup-input-email {
   font-family: "Nunito", sans-serif;
@@ -212,10 +218,6 @@ input.ng-invalid.ng-touched{
   color: #a8a6a7;
 }
 
-/* .signup-input-email:focus {
-  outline: 1px solid green;
-  border-bottom: none;
-} */
 
 .signup-input-password {
   font-family: "Nunito", sans-serif;
@@ -229,10 +231,6 @@ input.ng-invalid.ng-touched{
   color: #a8a6a7;
 }
 
-/* .signup-input-password:focus {
-  outline: 1px solid green;
-  border-bottom: none;
-} */
 
 .signup-input-password-confirm {
   font-family: "Nunito", sans-serif;
@@ -245,10 +243,6 @@ input.ng-invalid.ng-touched{
   color: #a8a6a7;
 }
 
-/* .signup-input-password-confirm:focus {
-  outline: 1px solid green;
-  border-bottom: none;
-} */
 
 .signup-input-password-confirm.dirty {
   outline: 1px solid red;
