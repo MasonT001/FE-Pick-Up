@@ -18,9 +18,6 @@ export class HomePageComponent implements OnInit {
   posts: Post[] = []
   postEditValue: any
 
-  events: Event[] = []
-  eventEditValue: any
-
   editImage = ''
   editContent = ''
   ngOnInit(): void {
@@ -44,17 +41,11 @@ export class HomePageComponent implements OnInit {
       this.posts = posts
     })
     this.posts = this.postService.currentUserPosts
-
-    this.eventService.currentUserEventsBS
-      .subscribe((events) => {
-        this.events = events
-      })
-    this.events = this.eventService.currentUserEvents
   }
 
 
-  submitEdit(editImage, editContent, id) {
-    this.postService.updatePost(editContent, id, this.postEditValue)
+  submitEdit(editContent, editImage, id) {
+    this.postService.updatePost(editContent, editImage, id, this.postEditValue)
     this.postEditValue = null
   }
 
@@ -63,28 +54,10 @@ export class HomePageComponent implements OnInit {
     this.postService.deletePost(id)
   }
 
-  deleteEvent(id) {
-    this.eventService.deleteEvent(id)
-  }
+  // ableToUpdate() {
+  //  console.log(this.user.id)
+  // }
 
-  updateEvent(editImage, editTitle, editDescription, editStartDate, editEndDate, editLocation, editSpots, id) {
-    this.eventService.updateEvent({
-      t: editTitle,
-      i: editImage,
-      d: editDescription,
-      sd: editStartDate,
-      ed: editEndDate,
-      el: editLocation,
-      es: editSpots
-    }, {
-      id: id
-    }, {
-      index: this.eventEditValue
-    }
-    );
-    this.postEditValue = null
-    // this.eventService.currentUserEvents[id] = new Event(editContent, editImage, id)
 
-  }
 
 }

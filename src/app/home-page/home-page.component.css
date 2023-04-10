@@ -15,5 +15,19 @@
 }
 
 .post-container {
-  color: brown !important
+  width: 570px;
+  height: 518px;
+  position: relative;
+  left: 100px;
+  bottom: 50px;
+  border-radius: 15px;
+  text-align: center;
+
+
+  background-color: lightgray;
+}
+
+.post-img {
+  max-width: 300px;
+  max-height: 300px;
 }

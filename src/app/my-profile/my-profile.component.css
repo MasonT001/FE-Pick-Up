@@ -1,4 +1,17 @@
+.container {
+    margin-left: 0;
+}
+
 .profile-header {
-    width: 100%;
+    width: 100vw;
+    height: 250px;
+    display: flex;
+
     background-color: aliceblue;
+}
+
+.profile-img {
+    border-radius: 90px;
+    height: 200px;
+    width: 200px;
 }

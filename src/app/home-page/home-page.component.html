@@ -8,51 +8,38 @@
     </div>
     <div class="col-mid">
       <app-create-post></app-create-post>
+      <!-- List of posts -->
       <div *ngFor="let post of posts; let i = index">
-        <div *ngIf="i === postEditValue; else content">
-          <form>
-            <input type="text" placeholder="Change Image" #editImage value="{{post.image_path}}">
-            <input type="text" placeholder="Change Content" #editContent value="{{post.content}}">
-            <button (click)="postEditValue = null" type="button">Cancel</button>
-            <button (click)="submitEdit(editContent.value, editImage.value, post.id)" type="button">Save</button>
-          </form>
-        </div>
-        <ng-template #content>
-          <div class="post-container">
-            <span>{{post.content}}</span>
-            <span>{{post.image_path}}</span>
-            <button (click)="postEditValue = i">Edit</button>
-            <button class="btn btn-danger" (click)="deletePost(post.id)">Delete</button>
+        <!-- Edit -->
+        <div class="post-container">
+
+          <div *ngIf="i === postEditValue; else content">
+            <form>
+              <input type="text" placeholder="Change Image" #editImage value="{{post.image_path}}">
+              <input type="text" placeholder="Change Content" #editContent value="{{post.content}}">
+              <button (click)="postEditValue = null" type="button">Cancel</button>
+              <button (click)="submitEdit(editContent.value, editImage.value, post.id)" type="button">Save</button>
+            </form>
           </div>
-        </ng-template>
-      </div>
-
-
-
-      <div *ngFor="let event of events; let i = index">
-        <div *ngIf="i === eventEditValue; else content">
-          <form>
-            <input type="text" placeholder="Change Image" #editImage>
-            <input type="text" placeholder="Change Title" #editTitle>
-            <input type="text" placeholder="Change Description" #editDescription>
-            <input type="text" placeholder="Change Start Date" #editStartDate>
-            <input type="text" placeholder="Change End Date" #editEndDate>
-            <input type="text" placeholder="Change Location" #editLocation>
-            <input type="text" placeholder="Change Spots Available" #editSpots>
-            <button (click)="eventEditValue = null" type="button">Cancel</button>
-            <button type="button" (click)="updateEvent(editTitle.value, editDescription.value, editImage.value, editStartDate.value, editEndDate.value, editLocation.value, editSpots.value ,event.id)">Save</button>
-          </form>
+          <!-- Display posts -->
+          <ng-template #content>
+            <div *ngIf="post.user_id === user.id">
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  ...
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" (click)="postEditValue = i">Edit</a></li>
+                  <li><a class="dropdown-item" (click)="deletePost(post.id)">Delete</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+            <span>{{post.content}}</span>
+            <img class="post-img" src="{{post.image_path}}">
+          </ng-template>
         </div>
-        <ng-template #content>
-          <span>{{event.title}}</span>
-          <button (click)="eventEditValue = i">Edit</button>
-          <button class="btn btn-danger" (click)="deleteEvent(event.id)">Delete</button>
-          <span>{{event.description}}</span>
-          <span>{{event.startDate}}</span>
-          <span>{{event.endDate}}</span>
-          <span>{{event.location}}</span>
-          <span>{{event.spotsAvailable}}</span>
-        </ng-template>
       </div>
     </div>
     <div class="col-right">
