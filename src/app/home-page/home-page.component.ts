@@ -15,6 +15,7 @@ export class HomePageComponent implements OnInit {
 
   constructor(private userService: UserService, private postService: PostService, private eventService: EventService, private http: HttpClient) { }
   user: any = null
+  username: any = ''
   posts: Post[] = []
   postEditValue: any
 
@@ -22,9 +23,12 @@ export class HomePageComponent implements OnInit {
   editContent = ''
   ngOnInit(): void {
     this.userService.currentUserBehavioralSubject
-      .subscribe((user) => {
+      .subscribe((user: any) => {
         this.user = user
         console.log(user)
+        if (user) {
+          this.username = user.username
+        }
       })
     let auth_token = localStorage.getItem('tokenValue')
     this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/posts/home', {

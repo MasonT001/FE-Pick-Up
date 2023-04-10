@@ -1,4 +1,4 @@
-<div *ngIf="user">
+<div>
   <app-navbar></app-navbar>
   <div class="container">
     <div class="col-left">
@@ -36,7 +36,10 @@
                 </ul>
               </div>
             </div>
-            <span>{{post.content}}</span>
+            <span class="title">Full Stack Dev</span>
+            <span class="username">{{username}}</span>
+            <img class="profile-picture" src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg" alt="profile picture">
+            <span class="post-content">{{post.content}}</span>
             <img class="post-img" src="{{post.image_path}}">
           </ng-template>
         </div>
