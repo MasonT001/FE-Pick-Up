@@ -15,5 +15,77 @@
 }
 
 .post-container {
-  color: brown !important
+  position: relative;
+  left: 100px;
+  bottom: 50px;
+  border-radius: 15px;
+  text-align: center;
+
+
+  background-color: lightgray;
+}
+
+.post-img {
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 200px;
+  min-height: 200px;
+
+  margin-top: 30px;
+  margin-bottom: 100px;
+
+}
+
+.post-content {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.profile-picture {
+  border-radius: 80px;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  right: 180px;
+  bottom: 220px;
+}
+
+.username {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  position: relative;
+  bottom: 226px;
+  right: 40px;
+
+  color: #000000;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;  
+  line-height: 12px;  
+
+  position: relative;
+  bottom: 210px;
+  left: 25px;
+
+  color: rgba(0, 0, 0, 0.46);
+}
+
+.dropdown {
+  position: relative;
+  left: 250px;
+  top: 20px;
 }

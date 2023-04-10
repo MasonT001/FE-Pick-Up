@@ -49,17 +49,18 @@ export class PostService {
     })
   }
 
-  updatePost(post, id: any, index) {
+  updatePost(content, image, id: any, index) {
     let auth_token = localStorage.getItem('tokenValue')
     this.http.put(`https://pick-up-sports-api.herokuapp.com/api/v1/posts/${id}`, {
-      "image_path": post,
-      "content": post
+      "image_path": image,
+      "content": content
     }, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${auth_token}`
       })
-    }).subscribe((update: any) => {
-      console.log(update)
+    }).subscribe((res: any) => {
+      console.log(res)
+      this.currentUserPosts[index] = res.payload.post
       this.currentUserPostsBS.next(this.currentUserPosts)
     })
   }

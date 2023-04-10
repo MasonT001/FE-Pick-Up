@@ -24,10 +24,6 @@ export class LoginComponentComponent implements OnInit{
     })
   }
 
-  // onSubmit() {
-  //   console.log(this.signinForm)
-  // }
-
   onUserLogin(user: any) {
     this.authService.onUserLogin(user)
   }

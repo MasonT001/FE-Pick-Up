@@ -1,8 +1,16 @@
 <div *ngIf="user" class="container">
     <app-navbar></app-navbar>
-    <button (click)="onGetUser()">Get User Info</button>
-    <div class="profile-header"></div>
+    <div class="profile-header">
+        <img src="https://pbs.twimg.com/profile_images/1252331764653137920/uQbyrBz__400x400.jpg" alt="Profile Image" class="profile-img">
+        <span>Full Name</span>
+        <span>Tags</span>
+        <span>Description</span>
+        <span>Events</span>
+        <span>Posts</span>
+        <span>Socials</span>
+    </div>
     <button routerLink="/my-events">My events</button>
+    <button (click)="onGetUser()">Get User Info</button>
 
     <div *ngFor="let event of events; let i = index">
         <div *ngIf="i === eventEditValue; else content">
