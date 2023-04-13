@@ -12,16 +12,16 @@ export class EventService {
 
   constructor(private http: HttpClient) { }
 
-  addEvent(event: any) {
+  addEvent(event) {
     console.log(this.currentUserEvents)
     let auth_token = localStorage.getItem('tokenValue')
     this.http.post('https://pick-up-sports-api.herokuapp.com/api/v1/events', {
-      title: 'Title test',
-      description: 'Description test',
-      start_date: 'Mon, 01 Jan -4712 00:00:00 +0000',
-      end_date: 'Tue, 02 Jan -4712 00:00:00 +0000',
-      location: 'Neosho',
-      num_players: 6
+      title: event.t,
+      description: event.d,
+      start_date: event.sd,
+      end_date: event.ed,
+      location: event.location,
+      num_players: event.spots
     }, {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${auth_token}`
