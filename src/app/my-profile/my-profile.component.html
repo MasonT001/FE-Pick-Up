@@ -2,12 +2,18 @@
     <app-navbar></app-navbar>
     <div class="profile-header">
         <img src="https://pbs.twimg.com/profile_images/1252331764653137920/uQbyrBz__400x400.jpg" alt="Profile Image" class="profile-img">
-        <span>Full Name</span>
-        <span>Tags</span>
-        <span>Description</span>
-        <span>Events</span>
-        <span>Posts</span>
-        <span>Socials</span>
+        <span class="name">{{username}}</span>
+        <span class="tag-1">Admin</span>
+        <span class="tag-2">Pro</span>
+        <span class="desc">Very good and awesome web dev</span>
+        <span class="events">Events: {{eventCount}}</span>
+        <span class="posts">Posts: {{postCount}}</span>
+        <span class="location">Neosho MO, United States</span>
+        <img src="assets/images/icons8-facebook.svg" alt="" class="fb">
+        <img src="assets/images/icons8-twitter.svg" alt="" class="twitter">
+        <img src="assets/images/icons8-instagram.svg" alt="" class="instagram">
+        <img src="assets/images/icons8-linkedin.svg" alt="" class="linkedin">
+        <img src="assets/images/pin-svgrepo-com.svg" alt="" class="pinpoint">
     </div>
     <button routerLink="/my-events">My events</button>
     <button (click)="onGetUser()">Get User Info</button>
@@ -36,5 +42,40 @@
           <span>{{event.location}}</span>
           <span>{{event.spotsAvailable}}</span>
         </ng-template>
+      </div>
+      <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
+        <div class="row align-items-end">
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+          <div class="col">
+            One of three columns
+          </div>
+        </div>
       </div>
 </div>

@@ -30,9 +30,11 @@
   max-height: 300px;
   min-width: 200px;
   min-height: 200px;
-
   margin-top: 30px;
   margin-bottom: 100px;
+  top: 40px;
+  position: relative;
+  right: 110px;
 
 }
 
@@ -43,6 +45,10 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+
+  position: relative;
+  right: 185px;
+  bottom: 175px;
 
   color: #000000;
 }
@@ -88,4 +94,41 @@
   position: relative;
   left: 250px;
   top: 20px;
+}
+
+.comment {
+  position: relative;
+  width: 518px;
+  height: 42px;
+  border-radius: 20px;
+  border: 0;
+  left: 26px;
+  top: 15px;
+}
+
+.like {
+  position: relative;
+  right: 475px;
+  bottom: 30px;
+}
+
+.chat {
+  position: relative;
+  right: 460px;
+  bottom: 30px;
+}
+
+.bookmark {
+  position: relative;
+  left: 250px;
+  bottom: 60px;
+}
+
+.btn {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  border: none;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background-color: transparent;
 }

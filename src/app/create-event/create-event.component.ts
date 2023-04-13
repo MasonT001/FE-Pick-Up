@@ -17,7 +17,6 @@ export class CreateEventComponent implements OnInit {
   edt = ''
   location = ''
   spots = ''
-  id = this.eventService.currentUserEvents.length + 1
 
   ngOnInit(): void {
   }
@@ -30,15 +29,16 @@ export class CreateEventComponent implements OnInit {
 
   submitEvent(title: string, desc: string, sdt: string, edt: string, location: string, spots: string) {
     this.displayStyle = 'none'
-    this.title = title
-    this.desc = desc
-    this.sdt = sdt
-    this.edt = edt
-    this.location = location
-    this.spots = spots
-    this.eventService.addEvent(new Event(title, desc, sdt, edt, location, spots, this.id))
+    this.eventService.addEvent({
+      t: title,
+      d: desc,
+      sd: sdt,
+      ed: edt,
+      location: location,
+      spots: spots
+    })
 
-    console.log(title, desc, sdt, edt, location, spots, this.id)
+    console.log(title, desc, sdt, edt, location, spots)
   }
 
 }

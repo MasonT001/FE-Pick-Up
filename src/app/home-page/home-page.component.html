@@ -25,7 +25,7 @@
           <ng-template #content>
             <div *ngIf="post.user_id === user.id">
               <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                <button class="btn btn-secondary" type="button" id="dropdownMenuButton1"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   ...
                 </button>
@@ -41,6 +41,10 @@
             <img class="profile-picture" src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg" alt="profile picture">
             <span class="post-content">{{post.content}}</span>
             <img class="post-img" src="{{post.image_path}}">
+            <input type="text" placeholder="Add Comment.." class="comment">
+            <img src="assets/images/uiw_like-o.svg" alt="" class="like">
+            <img src="assets/images/Chat.svg" alt="" class="chat">
+            <img src="assets/images/Bookmark.svg" alt="" class="bookmark">
           </ng-template>
         </div>
       </div>

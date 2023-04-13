@@ -3,6 +3,9 @@ import { UserService } from '../auth/user.service';
 import { AuthService } from '../auth/auth.service';
 import { EventService } from '../auth/event.service';
 import { Event } from '../shared/event-model';
+import { PostService } from '../auth/post.service';
+import { Post } from '../shared/post-model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-my-profile',
@@ -11,9 +14,13 @@ import { Event } from '../shared/event-model';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor(private userService:UserService, private authService: AuthService, private eventService: EventService) { }
+  constructor(private userService: UserService, private authService: AuthService, private eventService: EventService, private postService: PostService, private http: HttpClient) { }
 
+  username: any = ''
   events: Event[] = []
+  posts: Post[] = []
+  eventCount: number = 0
+  postCount: number = 0
   eventEditValue: any
   postEditValue: any
 
@@ -21,15 +28,41 @@ export class MyProfileComponent implements OnInit {
   user: any = null
   ngOnInit(): void {
     this.userService.currentUserBehavioralSubject
-    .subscribe((user) => {
-      this.user = user
-    })
+      .subscribe((user) => {
+        this.user = user
+        if (user) {
+          this.username = user.username
+        }
+      })
 
     this.eventService.currentUserEventsBS
-    .subscribe((events) => {
-      this.events = events
+      .subscribe((events) => {
+        this.events = events
+      })
+    this.events = this.eventService.currentUserEvents
+
+    this.postService.currentUserPostsBS.subscribe((posts) => {
+      this.posts = posts
     })
-  this.events = this.eventService.currentUserEvents
+
+    let auth_token = localStorage.getItem('tokenValue')
+    this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/events/my_events', {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
+    }).subscribe((res: any) => {
+      console.log(res.payload.length)
+      this.eventCount = res.payload.length
+    })
+
+    this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/posts/home', {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${auth_token}`
+      })
+    }).subscribe((res: any) => {
+      console.log(res)
+      this.postCount = res.payload.length
+    })
   }
 
   onGetUser() {
