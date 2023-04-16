@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
-import { MyEventsComponent } from './my-events/my-events.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { SignupComponentComponent } from './signup-component/signup-component.component';
 
@@ -13,7 +12,6 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponentComponent},
   { path: 'home', component: HomePageComponent, canActivate: [AuthGuard]},
   { path: 'my-profile', component: MyProfileComponent, canActivate: [AuthGuard]},
-  { path: 'my-events', component: MyEventsComponent}
 ];
 
 @NgModule({

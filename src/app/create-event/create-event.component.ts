@@ -37,8 +37,6 @@ export class CreateEventComponent implements OnInit {
       location: location,
       spots: spots
     })
-
-    console.log(title, desc, sdt, edt, location, spots)
   }
 
 }
