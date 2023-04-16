@@ -1,7 +1,8 @@
 <div *ngIf="user" class="container">
     <app-navbar></app-navbar>
     <div class="profile-header">
-        <img src="https://pbs.twimg.com/profile_images/1252331764653137920/uQbyrBz__400x400.jpg" alt="Profile Image" class="profile-img">
+        <img src="https://pbs.twimg.com/profile_images/1252331764653137920/uQbyrBz__400x400.jpg" alt="Profile Image"
+            class="profile-img">
         <span class="name">{{username}}</span>
         <span class="tag-1">Admin</span>
         <span class="tag-2">Pro</span>
@@ -15,67 +16,60 @@
         <img src="assets/images/icons8-linkedin.svg" alt="" class="linkedin">
         <img src="assets/images/pin-svgrepo-com.svg" alt="" class="pinpoint">
     </div>
-    <button routerLink="/my-events">My events</button>
-    <button (click)="onGetUser()">Get User Info</button>
 
-    <div *ngFor="let event of events; let i = index">
-        <div *ngIf="i === eventEditValue; else content">
-          <form>
-            <input type="text" placeholder="Change Image" #editImage>
-            <input type="text" placeholder="Change Title" #editTitle>
-            <input type="text" placeholder="Change Description" #editDescription>
-            <input type="text" placeholder="Change Start Date" #editStartDate>
-            <input type="text" placeholder="Change End Date" #editEndDate>
-            <input type="text" placeholder="Change Location" #editLocation>
-            <input type="text" placeholder="Change Spots Available" #editSpots>
-            <button (click)="eventEditValue = null" type="button">Cancel</button>
-            <button type="button" (click)="updateEvent(editTitle.value, editDescription.value, editImage.value, editStartDate.value, editEndDate.value, editLocation.value, editSpots.value ,event.id)">Save</button>
-          </form>
+    <div class="event-container">
+        <h4>Events</h4>
+        <div *ngFor="let event of events; let i = index">
+            <div *ngIf="i === eventEditValue; else content">
+                <form>
+                    <input type="text" placeholder="Change Image" #editImage>
+                    <input type="text" placeholder="Change Title" #editTitle>
+                    <input type="text" placeholder="Change Description" #editDescription>
+                    <input type="text" placeholder="Change Start Date" #editStartDate>
+                    <input type="text" placeholder="Change End Date" #editEndDate>
+                    <input type="text" placeholder="Change Location" #editLocation>
+                    <input type="text" placeholder="Change Spots Available" #editSpots>
+                    <button (click)="eventEditValue = null" type="button">Cancel</button>
+                    <button type="button"
+                        (click)="updateEvent(editTitle.value, editDescription.value, editImage.value, editStartDate.value, editEndDate.value, editLocation.value, editSpots.value ,event.id)">Save</button>
+                </form>
+            </div>
+            <ng-template #content>
+                <span>{{event.title}}</span>
+                <span>{{event.description}}</span>
+                <span>{{event.startDate}}</span>
+                <span>{{event.endDate}}</span>
+                <span>{{event.location}}</span>
+                <span>{{event.spotsAvailable}}</span>
+                <button (click)="eventEditValue = i">Edit</button>
+                <button class="btn btn-danger" (click)="deleteEvent(event.id)">Delete</button>
+                <button class="join-btn">Join</button>
+            </ng-template>
         </div>
-        <ng-template #content>
-          <span>{{event.title}}</span>
-          <button (click)="eventEditValue = i">Edit</button>
-          <button class="btn btn-danger" (click)="deleteEvent(event.id)">Delete</button>
-          <span>{{event.description}}</span>
-          <span>{{event.startDate}}</span>
-          <span>{{event.endDate}}</span>
-          <span>{{event.location}}</span>
-          <span>{{event.spotsAvailable}}</span>
-        </ng-template>
-      </div>
-      <div class="container">
-        <div class="row align-items-start">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-        </div>
-        <div class="row align-items-end">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-        </div>
-      </div>
+    </div>
+    <div class="mutual-friends">
+            <h2>Mutual Friends</h2>
+            <ul class="people_list">
+                <li>
+                    <img src="https://pbs.twimg.com/media/FepfX_OXkAEvFmZ.jpg" alt="" class="mt-profile-img">
+                    <span class="host_name">Andre Kae</span>
+                    <span class="description-1">Back End Engineer</span>
+                    <button class="connect-btn">Connect</button>
+                </li>
+                <li>
+                    <img src="https://i.kym-cdn.com/photos/images/newsfeed/002/164/493/b8b.jpg" alt="" class="mt-profile-img">
+                    <span class="host_name">Drizzy Drake</span>
+                    <span class="description-2">Cloud Engineer</span>
+                    <button class="connect-btn">Connect</button>
+                </li>
+                <li>
+                    <img src="https://pbs.twimg.com/profile_images/1252331764653137920/uQbyrBz__400x400.jpg" alt="" class="mt-profile-img">
+                    <span class="host_name">Riley Conway</span>
+                    <span class="description-3">Full Stack Dev</span>
+                    <button class="connect-btn">Connect</button>
+                </li>
+                <hr>
+                <span class="see_all">See All</span>
+            </ul>
+    </div>
 </div>

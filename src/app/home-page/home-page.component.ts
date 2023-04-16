@@ -58,10 +58,4 @@ export class HomePageComponent implements OnInit {
     this.postService.deletePost(id)
   }
 
-  // ableToUpdate() {
-  //  console.log(this.user.id)
-  // }
-
-
-
 }

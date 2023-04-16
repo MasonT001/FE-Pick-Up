@@ -53,6 +53,7 @@ export class MyProfileComponent implements OnInit {
     }).subscribe((res: any) => {
       console.log(res.payload.length)
       this.eventCount = res.payload.length
+      this.events = res.payload
     })
 
     this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/posts/home', {
@@ -62,6 +63,7 @@ export class MyProfileComponent implements OnInit {
     }).subscribe((res: any) => {
       console.log(res)
       this.postCount = res.payload.length
+      this.posts = res.payload
     })
   }
 
@@ -90,6 +92,16 @@ export class MyProfileComponent implements OnInit {
 
   deleteEvent(id) {
     this.eventService.deleteEvent(id)
+  }
+
+
+  submitEdit(editContent, editImage, id) {
+    this.postService.updatePost(editContent, editImage, id, this.postEditValue)
+    this.postEditValue = null
+  }
+
+  deletePost(id) {
+    this.postService.deletePost(id)
   }
 
 }
