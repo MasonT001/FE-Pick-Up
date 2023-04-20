@@ -1,21 +1,47 @@
 <div class="post-event">
-    <div class="row">
-        <div class="col-2">
-            <img src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
-                alt="" class="profile-img ">
-        </div>
-        <div class="col-10">
-            <input type="text" placeholder="Write Something..." class="text-input" name="search" #box>
-        </div>
+  <div class="row">
+    <div class="col-2">
+      <img
+        src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
+        alt=""
+        class="profile-img"
+      />
     </div>
-    <div class="row">
-        <div class="col-2">
-            <img src="/assets/images/Images.svg" alt="" class="photo-img">
-        </div>
-        <div class="col-10">
-            <input type="text" placeholder="Add Image Path" class="photo-input" #imageBox>
-            <button class="event-submit" (click)="createPost(box.value, imageBox.value)"><img
-                    src="assets/images/Send.svg" alt=""></button>
-        </div>
+    <div class="col-10">
+      <input
+        type="text"
+        placeholder="Write Something..."
+        class="text-input"
+        name="search"
+        #box
+      />
     </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <div>
+        <img src="/assets/images/Images.svg" alt="" class="photo-img" />
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="row">
+        <div class="col-10">
+          <input
+            type="text"
+            placeholder="Add Image Path"
+            class="photo-input"
+            #imageBox
+          />
+        </div>
+        <div class="col-2">
+          <button
+            class="event-submit"
+            (click)="createPost(box.value, imageBox.value)"
+          >
+            <img src="assets/images/Send.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
