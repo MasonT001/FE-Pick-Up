@@ -11,7 +11,7 @@
       <!-- List of posts -->
       <div *ngFor="let post of posts; let i = index">
         <!-- Edit -->
-        <div class="post-container">
+        <div class="post-container mb-3">
 
           <div *ngIf="i === postEditValue; else content">
             <form>
@@ -24,7 +24,7 @@
           <!-- Display posts -->
           <ng-template #content>
             <div *ngIf="post.user_id === user.id">
-              <div class="dropdown">
+             <div class="dropdown">
                 <button class="btn btn-secondary" type="button" id="dropdownMenuButton1"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   ...
@@ -33,7 +33,7 @@
                   <li><a class="dropdown-item" (click)="postEditValue = i">Edit</a></li>
                   <li><a class="dropdown-item" (click)="deletePost(post.id)">Delete</a></li>
                 </ul>
-              </div>
+              </div> 
             </div>
             <span class="title">Full Stack Dev</span>
             <span class="username">{{username}}</span>
