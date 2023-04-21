@@ -11,39 +11,74 @@
       <!-- List of posts -->
       <div *ngFor="let post of posts; let i = index">
         <!-- Edit -->
-        <div class="post-container">
-
+        <div class="post-container mb-3">
           <div *ngIf="i === postEditValue; else content">
             <form>
-              <input type="text" placeholder="Change Image" #editImage value="{{post.image_path}}">
-              <input type="text" placeholder="Change Content" #editContent value="{{post.content}}">
-              <button (click)="postEditValue = null" type="button">Cancel</button>
-              <button (click)="submitEdit(editContent.value, editImage.value, post.id)" type="button">Save</button>
+              <input
+                type="text"
+                placeholder="Change Image"
+                #editImage
+                value="{{ post.image_path }}"
+              />
+              <input
+                type="text"
+                placeholder="Change Content"
+                #editContent
+                value="{{ post.content }}"
+              />
+              <button (click)="postEditValue = null" type="button">
+                Cancel
+              </button>
+              <button
+                (click)="
+                  submitEdit(editContent.value, editImage.value, post.id)
+                "
+                type="button"
+              >
+                Save
+              </button>
             </form>
           </div>
           <!-- Display posts -->
           <ng-template #content>
             <div *ngIf="post.user_id === user.id">
               <div class="dropdown">
-                <button class="btn btn-secondary" type="button" id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown" aria-expanded="false">
+                <button
+                  class="btn btn-secondary"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   ...
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" (click)="postEditValue = i">Edit</a></li>
-                  <li><a class="dropdown-item" (click)="deletePost(post.id)">Delete</a></li>
+                  <li>
+                    <a class="dropdown-item" (click)="postEditValue = i"
+                      >Edit</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" (click)="deletePost(post.id)"
+                      >Delete</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
             <span class="title">Full Stack Dev</span>
-            <span class="username">{{username}}</span>
-            <img class="profile-picture" src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg" alt="profile picture">
-            <span class="post-content">{{post.content}}</span>
-            <img class="post-img" src="{{post.image_path}}">
-            <input type="text" placeholder="Add Comment.." class="comment">
-            <img src="assets/images/uiw_like-o.svg" alt="" class="like">
-            <img src="assets/images/Chat.svg" alt="" class="chat">
-            <img src="assets/images/Bookmark.svg" alt="" class="bookmark">
+            <span class="username">{{ username }}</span>
+            <img
+              class="profile-picture"
+              src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
+              alt="profile picture"
+            />
+            <span class="post-content">{{ post.content }}</span>
+            <img class="post-img" src="{{ post.image_path }}" />
+            <input type="text" placeholder="Add Comment.." class="comment" />
+            <img src="assets/images/uiw_like-o.svg" alt="" class="like" />
+            <img src="assets/images/Chat.svg" alt="" class="chat" />
+            <img src="assets/images/Bookmark.svg" alt="" class="bookmark" />
           </ng-template>
         </div>
       </div>

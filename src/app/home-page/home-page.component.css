@@ -1,9 +1,10 @@
 .navbar-nav .active {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.55);
-  }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.55);
+}
 
 .container {
   display: flex;
+  gap: 5%;
 }
 
 .container-fluid {
@@ -11,7 +12,15 @@
 }
 
 .col-left {
-  width: 18%;
+  width: 22%;
+}
+
+.col-mid {
+  width: 46%;
+}
+
+.col-right {
+  width: 22%;
 }
 
 .post-container {
@@ -20,7 +29,6 @@
   bottom: 50px;
   border-radius: 15px;
   text-align: center;
-
 
   background-color: lightgray;
 }
@@ -35,11 +43,10 @@
   top: 40px;
   position: relative;
   right: 110px;
-
 }
 
 .post-content {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -63,7 +70,7 @@
 }
 
 .username {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -77,11 +84,11 @@
 }
 
 .title {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 10px;  
-  line-height: 12px;  
+  font-size: 10px;
+  line-height: 12px;
 
   position: relative;
   bottom: 210px;
