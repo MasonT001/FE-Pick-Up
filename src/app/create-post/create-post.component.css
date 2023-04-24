@@ -11,19 +11,18 @@
     background: white;
     border-radius: 10px 10px 0px 0px;
     padding-left: 70px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 0px 1px rgba(0, 0, 0, 0.12);
     outline: none;
 }
 
 .photo-input {
     max-width: 493px;
     max-height: 70px;
+    height: 70px;
     width:100%;
     border-radius: 0px 0px 0px 10px;
     border: none;
     background: lightsalmon;
     padding-left: 70px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 0px 1px rgba(0, 0, 0, 0.12);
 }
 
 .event-submit {
@@ -31,9 +30,6 @@
     height: 70px;
     border-radius: 0px 0px 10px 0px;
     border: none;
-    /* position: relative; */
-    bottom: 70px;
-    left: 493px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 0px 1px rgba(0, 0, 0, 0.12);
 }
 
@@ -50,18 +46,12 @@
  .photo-img {
     width: 40px;
     height: 40px;
-    /* position: relative; */
-    top: 12px;
-    left: 115px;
     border-radius: 20px;
 }
 
 .profile-img {
     width: 40px;
     height: 40px;
-    /* position: relative; */
-    top: 33px;
-    left: 115px;
     border-radius: 20px;
 }
 
@@ -77,13 +67,9 @@ input#search {
     max-width: 570px;
     max-height: 518px;
     width:100%;
-    /* position: relative; */
-    left: 98px;
     background: red;
     border-radius: 20px;
-    bottom: 90px;
-    margin-top: 74px;
-
+    margin-top: 10px;
 }
 
 .description {
@@ -101,4 +87,13 @@ input#search {
     display: flex;
     height: 107px;
     margin-left: 600px;
+}
+
+.col-2 {
+    padding: 0;
+    background-color: lightsalmon;
+}
+
+.col-10 {
+    padding: 0;
 }
