@@ -66,8 +66,7 @@
                 </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col" style="display: flex;">
+            <div class="box">
                 <img
                   class="profile-picture"
                   src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
@@ -75,15 +74,21 @@
                 />
                 <span class="username">{{ username }}</span>
                 <span class="title">Full Stack Dev</span>
-              </div>
 
             </div>
-            <span class="post-content">{{ post.content }}</span>
-            <img class="post-img" src="{{ post.image_path }}" />
-            <input type="text" placeholder="Add Comment.." class="comment" />
-            <img src="assets/images/uiw_like-o.svg" alt="" class="like" />
-            <img src="assets/images/Chat.svg" alt="" class="chat" />
-            <img src="assets/images/Bookmark.svg" alt="" class="bookmark" />
+
+            <div class="box-2">
+              <span class="post-content">{{ post.content }}</span>
+              <img class="post-img" src="{{ post.image_path }}" />
+            </div>
+            <div class="box-3">
+              <div class="row">
+                <img src="assets/images/uiw_like-o.svg" alt="" class="like" />
+                <img src="assets/images/Chat.svg" alt="" class="chat" />
+                <img src="assets/images/Bookmark.svg" alt="" class="bookmark" />
+              </div>
+              <input type="text" placeholder="Add Comment.." class="comment" />
+            </div>
           </ng-template>
         </div>
       </div>

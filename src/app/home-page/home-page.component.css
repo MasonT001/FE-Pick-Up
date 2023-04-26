@@ -109,3 +109,19 @@
   transform: translate(-50%, -50%) rotate(90deg);
   background-color: transparent;
 }
+
+.box {
+  max-width: 136px;
+  display: flex;
+  height: 26px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.box-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+      
