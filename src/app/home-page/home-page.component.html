@@ -2,9 +2,11 @@
   <app-navbar></app-navbar>
   <div class="container">
     <div class="col-left">
-      <app-create-event></app-create-event>
-      <app-stats></app-stats>
-      <app-hashtags></app-hashtags>
+      <div style="position: sticky; top: 10%;">
+        <app-create-event></app-create-event>
+        <app-stats></app-stats>
+        <app-hashtags></app-hashtags>
+      </div>
     </div>
     <div class="col-mid">
       <app-create-post></app-create-post>
@@ -66,31 +68,46 @@
                 </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col" style="display: flex;">
+            <div class="box">
                 <img
                   class="profile-picture"
                   src="https://www.jokesforfunny.com/wp-content/uploads/2021/06/0596bdb89b60fe771acd2f5972a9d3e3-905x1200.jpg"
                   alt="profile picture"
                 />
-                <span class="username">{{ username }}</span>
-                <span class="title">Full Stack Dev</span>
-              </div>
+                <div>
+                  <div class="username">{{ username }}</div>
+                  <div class="title">Full Stack Dev</div>
+                </div>
 
             </div>
-            <span class="post-content">{{ post.content }}</span>
-            <img class="post-img" src="{{ post.image_path }}" />
-            <input type="text" placeholder="Add Comment.." class="comment" />
-            <img src="assets/images/uiw_like-o.svg" alt="" class="like" />
-            <img src="assets/images/Chat.svg" alt="" class="chat" />
-            <img src="assets/images/Bookmark.svg" alt="" class="bookmark" />
+            <div class="post-content">{{ post.content }}</div>
+
+            <div class="box-2">
+              <img class="post-img" src="{{ post.image_path }}" />
+            </div>
+            <div class="box-3">
+              <div style="display: flex; width: 100%;">
+                <div style="width: 7%;">
+                  <img src="assets/images/uiw_like-o.svg" alt="" class="like" />
+                </div>
+                <div style="width: 7%;">
+                  <img src="assets/images/Chat.svg" alt="" class="chat" />
+                </div>
+                <div style="width: 86%; text-align: right;">
+                  <img src="assets/images/Bookmark.svg" alt="" class="bookmark" />
+                </div>
+              </div>
+              <input type="text" placeholder="Add Comment.." class="comment" />
+            </div>
           </ng-template>
         </div>
       </div>
     </div>
     <div class="col-right">
-      <app-upcoming-events></app-upcoming-events>
-      <app-pymk></app-pymk>
+      <div style="position: sticky; top: 10%;">
+        <app-upcoming-events></app-upcoming-events>
+        <app-pymk></app-pymk>
+      </div>
     </div>
   </div>
 </div>
