@@ -5,6 +5,7 @@
 .container {
   display: flex;
   gap: 5%;
+  margin-top: 2%;
 }
 
 .container-fluid {
@@ -13,6 +14,7 @@
 
 .col-left {
   width: 22%;
+  position: relative;
 }
 
 .col-mid {
@@ -21,24 +23,21 @@
 
 .col-right {
   width: 22%;
+  position: relative;
 }
 
 .post-container {
   border-radius: 15px;
-  text-align: center;
 
-  background-color: lightgray;
+  background-color: #d3d3d3;
   margin-top: 10px;
+  padding: 0px 24px 12px 24px;
 }
 
 .post-img {
-  max-width: 300px;
-  max-height: 300px;
-  min-width: 200px;
-  min-height: 200px;
-  margin-top: 30px;
-  margin-bottom: 100px;
-  width: 100%;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    width: 100%;
 }
 
 .post-content {
@@ -64,6 +63,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
+  text-align: left;
 
 
   color: #000000;
@@ -75,6 +75,7 @@
   font-weight: 400;
   font-size: 10px;
   line-height: 12px;
+  text-align: left;
 
   color: rgba(0, 0, 0, 0.46);
 }
@@ -84,12 +85,11 @@
 }
 
 .comment {
-  position: relative;
-  max-width: 518px;
   width: 100%;
   height: 42px;
   border-radius: 20px;
   border: 0;
+  padding: 20px;
 }
 
 .like {
@@ -111,11 +111,13 @@
 }
 
 .box {
-  max-width: 136px;
   display: flex;
   height: 26px;
   flex-wrap: wrap;
-  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .box-2 {
@@ -125,3 +127,10 @@
   align-items: center;
 }
       
+.box-3 {
+  display: flex;
+  max-width: 593px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 12px;
+}
