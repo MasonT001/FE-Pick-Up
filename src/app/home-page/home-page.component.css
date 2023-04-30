@@ -80,9 +80,6 @@
   color: rgba(0, 0, 0, 0.46);
 }
 
-.dropdown {
-
-}
 
 .comment {
   width: 100%;
@@ -90,18 +87,6 @@
   border-radius: 20px;
   border: 0;
   padding: 20px;
-}
-
-.like {
-
-}
-
-.chat {
-
-}
-
-.bookmark {
-
 }
 
 .btn {
