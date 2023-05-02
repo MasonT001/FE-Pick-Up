@@ -29,8 +29,11 @@ export class PostService {
       })
     }).subscribe((res: any) => {
       console.log(res.payload.post)
+      console.log(this.currentUserPosts)
       this.currentUserPosts.push(res.payload.post)
+      console.log(this.currentUserPosts)
      this.currentUserPostsBS.next(this.currentUserPosts)
+     console.log(this.currentUserPosts)
     })
   }
 

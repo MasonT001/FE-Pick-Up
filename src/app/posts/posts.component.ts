@@ -1,4 +1,4 @@
-import { Component, ContentChild, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from '../auth/post.service';
 import { UserService } from '../auth/user.service';
 import { Event } from '../shared/event-model';
@@ -7,16 +7,18 @@ import { EventService } from '../auth/event.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.css']
 })
-export class HomePageComponent implements OnInit {
+export class PostsComponent implements OnInit {
 
   constructor(private userService: UserService, private postService: PostService, private eventService: EventService, private http: HttpClient) { }
+
+
   user: any = null
   username: any = ''
-  posts: Post[] = []
+  @Input() posts: Post[] = []
   postEditValue: any
 
   editImage = ''
@@ -25,6 +27,7 @@ export class HomePageComponent implements OnInit {
     this.userService.currentUserBehavioralSubject
       .subscribe((user: any) => {
         this.user = user
+        // console.log(user)
         if (user) {
           this.username = user.username
         }
@@ -40,10 +43,12 @@ export class HomePageComponent implements OnInit {
         console.log(this.posts)
       })
 
-    this.postService.currentUserPostsBS.subscribe((posts: any) => {
-      this.posts = posts
+    this.postService.currentUserPostsBS.subscribe((res: any) => {
+      this.posts = res
+      console.log(res)
     })
     this.posts = this.postService.currentUserPosts
+    console.log(this.posts)
   }
 
 
