@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from '../auth/post.service';
 import { UserService } from '../auth/user.service';
 import { Event } from '../shared/event-model';
@@ -18,7 +18,7 @@ export class PostsComponent implements OnInit {
 
   user: any = null
   username: any = ''
-  posts: Post[] = []
+  @Input() posts: Post[] = []
   postEditValue: any
 
   editImage = ''
@@ -27,7 +27,7 @@ export class PostsComponent implements OnInit {
     this.userService.currentUserBehavioralSubject
       .subscribe((user: any) => {
         this.user = user
-        console.log(user)
+        // console.log(user)
         if (user) {
           this.username = user.username
         }
@@ -43,10 +43,12 @@ export class PostsComponent implements OnInit {
         console.log(this.posts)
       })
 
-    this.postService.currentUserPostsBS.subscribe((posts) => {
-      this.posts = posts
+    this.postService.currentUserPostsBS.subscribe((res: any) => {
+      this.posts = res
+      console.log(res)
     })
     this.posts = this.postService.currentUserPosts
+    console.log(this.posts)
   }
 
 

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
         })
       })
       .subscribe((res: any) => {
-        console.log(res.payload)
+        // console.log(res.payload)
         this.userService.setUser(res.payload)
       })
     }

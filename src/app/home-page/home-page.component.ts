@@ -25,7 +25,6 @@ export class HomePageComponent implements OnInit {
     this.userService.currentUserBehavioralSubject
       .subscribe((user: any) => {
         this.user = user
-        console.log(user)
         if (user) {
           this.username = user.username
         }
@@ -41,7 +40,7 @@ export class HomePageComponent implements OnInit {
         console.log(this.posts)
       })
 
-    this.postService.currentUserPostsBS.subscribe((posts) => {
+    this.postService.currentUserPostsBS.subscribe((posts: any) => {
       this.posts = posts
     })
     this.posts = this.postService.currentUserPosts
