@@ -6,7 +6,7 @@
                 alt="" class="profile-img" />
         </div>
         <div class="col-10">
-            <input type="text" placeholder="Write Something..." class="text-input" name="search" #box />
+            <input type="text" placeholder="Write Something..." class="text-input" name="search" #box id="text-input" [(ngModel)]="displayVal"/>
         </div>
     </div>
     <div class="row" style="overflow: hidden;">
@@ -18,7 +18,7 @@
         <div class="col-10">
             <div class="row" >
                 <div class="col-10">
-                    <input type="text" placeholder="Add Image Path" class="photo-input" #imageBox />
+                    <input type="text" placeholder="Add Image Path" class="photo-input" #imageBox id="image-input" [(ngModel)]="imageVal" />
                 </div>
                 <div class="col-2" style="background-color: white; border-radius: 10px;">
                     <button class="event-submit" (click)="createPost(box.value, imageBox.value)">
