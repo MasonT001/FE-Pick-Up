@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PostService } from '../auth/post.service';
 import { UserService } from '../auth/user.service';
 import { Event } from '../shared/event-model';
@@ -18,7 +18,7 @@ export class PostsComponent implements OnInit {
 
   user: any = null
   username: any = ''
-  @Input() posts: Post[] = []
+  posts: Post[] = []
   postEditValue: any
 
   editImage = ''
