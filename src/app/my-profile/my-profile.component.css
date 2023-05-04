@@ -14,32 +14,20 @@
     border-radius: 90px;
     height: 200px;
     width: 200px;
-
-    position: relative;
-    left: 100px;
-    top: 25px;
 }
 
 .name {
-    position: relative;
-    top: 30px;
-    left: 150px;
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
 }
 
 .desc {
-    position: relative;
-    top: 105px;
-    right: 135px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
 
 .tag-1 {
     display: flex;
-    position: relative;
-    top: 75px;
     font-size: 12px;
     right: 40px;
     border: 1px solid black;
@@ -52,9 +40,6 @@
 
 .tag-2 {
     display: flex;
-    position: relative;
-    top: 75px;
-    right: 25px;
     border: 1px solid black;
     height: 20px;
     width: 35px;
@@ -64,8 +49,6 @@
 }
 
 .events {
-        position: relative;
-        top: 168px;
         display: flex;
         border: 1px solid black;
         align-items: center;
@@ -77,8 +60,6 @@
 }
 
 .posts {
-    position: relative;
-    top: 168px;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -90,11 +71,7 @@
 }
 
 .location {
-    position: relative;
     display: flex;
-    right: 730px;
-    top: 150px;
-    bottom: 80px;
     height: 60px;
 }
 
@@ -122,9 +99,6 @@
     height: 20px;
     width: 20px;
     display: flex;
-    position: relative;
-    right: 1065px;
-    top: 150px;
 }
 
 .row-container {
@@ -136,19 +110,13 @@
     border: 1px solid black;
     width: 33%;
     border-radius: 20px;
-    position: relative;
-    top: 25px;
 }
 
 .events-h4 {
-    position: relative;
-    left: 150px;
-    top: 20px;
+
 }
 
 .mutual-friends {
-    position: relative;
-    left: 1200px;
     border: 1px solid black;
     border-radius: 20px;
     width: 278px;
@@ -199,9 +167,6 @@ padding-left: 83px;
 }
 
 .description-1 {
-    position: relative;
-    top: 20px;
-    right: 74px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -210,9 +175,6 @@ padding-left: 83px;
 }
 
 .description-2 {
-    position: relative;
-    top: 20px;
-    right: 91px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -221,9 +183,6 @@ padding-left: 83px;
 }
 
 .description-3 {
-    position: relative;
-    top: 20px;
-    right: 95px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -232,12 +191,8 @@ padding-left: 83px;
 }
 
 .connect-btn {
-    position: relative;
     width: 64.93px;
-    position: relative;
     height: 32px;
-    left: 150px;
-    top: -26px;
     border-radius: 8px;
     border: 1px solid #0C4195;
     background: #FFFFFF;
@@ -252,17 +207,12 @@ padding-left: 83px;
 }
 
 .mt-profile-img {
-    top: 9px;
     width: 36.52px;
     height: 40px;
     border-radius: 16px;
-    position: relative;
-    right: 20px;
 }
 
 .mutual-friends hr {
-    position: relative;
-    bottom: 10px;
     margin: 4px 0px 0px -33px;
 }
 
@@ -274,17 +224,10 @@ padding-left: 83px;
     line-height: 14px;
     color: #00ACFF;
     margin-left: 83px;
-    position: relative;
-    bottom: 5px;
 } 
 
 .post-container {
     background-color: lightgrey;
-    position: relative;
-    left: 500px;
-    width: 570px;
-    height: 533px;
-    bottom: 425px;
     border-radius: 20px;
 }
 
@@ -295,9 +238,6 @@ padding-left: 83px;
     min-height: 200px;
     margin-top: 30px;
     margin-bottom: 100px;
-    top: 74px;
-    position: relative;
-    left: 150px;
   }
   
   .post-content {
@@ -308,10 +248,6 @@ padding-left: 83px;
     line-height: 16px;
     text-align: center;
   
-    position: relative;
-    bottom: 160px;
-    left: 77px;
-  
     color: #000000;
   }
 
@@ -319,9 +255,6 @@ padding-left: 83px;
     border-radius: 80px;
     width: 44px;
     height: 44px;
-    position: relative;
-    right: 366px;
-    bottom: 211px;
   }
   
   .username {
@@ -331,9 +264,6 @@ padding-left: 83px;
     font-size: 12px;
     line-height: 14px;
   
-    position: relative;
-    bottom: 220px;
-    right: 229px;
   
     color: #000000;
   }
@@ -344,52 +274,33 @@ padding-left: 83px;
     font-weight: 400;
     font-size: 10px;  
     line-height: 12px;  
-  
-    position: relative;
-    bottom: 205px;
-    right: 163px;
-  
+
     color: rgba(0, 0, 0, 0.46);
   }
 
   .post-h4 {
-    left: 750px;
-    position: relative;
-    bottom: 425px;
+
   }
 
   .comment {
-    position: relative;
     width: 518px;
     height: 42px;
     border-radius: 20px;
     border: 0;
-    left: 26px;
-    top: 15px;
   }
   
   .like {
-    position: relative;
-    right: 475px;
-    bottom: 30px;
   }
   
   .chat {
-    position: relative;
-    right: 460px;
-    bottom: 30px;
+
   }
   
   .bookmark {
-    position: relative;
-    left: 503px;
-    bottom: 60px;
+
   }
 
   .btn {
-    position: relative;
-    top: 40px;
-    left: 530px;
     border: none;
     transform: translate(-50%, -50%) rotate(90deg);
     background-color: transparent;

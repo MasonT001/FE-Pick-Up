@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../auth/post.service';
 import { UserService } from '../auth/user.service';
-import { Event } from '../shared/event-model';
 import { Post } from '../shared/post-model';
 import { EventService } from '../auth/event.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
