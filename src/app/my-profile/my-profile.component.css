@@ -1,230 +1,213 @@
-.container {
-    margin-left: 0;
-}
-
-.container-2 {
-    display: flex;
-    gap: 5%;
-    margin-top: 2%;
-}
-
-.col-left {
-    width: 22%;
-    position: relative;
-  }
-  
-  .col-mid {
-    width: 46%;
-  }
-  
-  .col-right {
-    width: 22%;
-    position: relative;
-  }
-
 .profile-header {
-    width: 100vw;
-    height: 250px;
     display: flex;
-
-    background-color: aliceblue;
-}
-
-.profile-img {
-    border-radius: 90px;
-    height: 200px;
-    width: 200px;
-}
-
-.name {
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-}
-
-.desc {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-}
-
-.tag-1 {
-    display: flex;
-    font-size: 12px;
-    right: 40px;
-    border: 1px solid black;
-    height: 20px;
-    width: 60px;
-    border-radius: 10px;
-    justify-content: center;
-    font-size: 12px;
-}
-
-.tag-2 {
-    display: flex;
-    border: 1px solid black;
-    height: 20px;
-    width: 35px;
-    border-radius: 10px;
-    justify-content: center;
-    font-size: 12px;
-}
-
-.events {
-        display: flex;
-        border: 1px solid black;
-        align-items: center;
-        height: 80px;
-        width: 150px;
-        justify-content: center;
-
-        font-weight: bold;
-}
-
-.posts {
-    border: 1px solid black;
-    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    width: 150px;
-    justify-content: center;
-    height: 80px;
-    
+    padding: 1rem;
+    background-color: #f5f5f5;
+    height: 250px;
+  }
+  
+  .profile-header img.profile-img {
+      display: flex;
+      align-self: flex-start;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header .name {
+    font-size: 3rem;
     font-weight: bold;
-}
-
-.location {
+    margin-bottom: 1rem;
+    height: 245px;
+  }
+  
+  .profile-header .tag-1,
+  .profile-header .tag-2 {
     display: flex;
-    height: 60px;
-}
-
-.fb {
-    width: 30px;
-    height: 30px;
-}
-
-.twitter {
-    width: 30px;
-    height: 30px;
-}
-
-.linkedin {
-    width: 30px;
-    height: 30px;
-}
-
-.instagram {
-    width: 30px;
-    height: 30px;
-}
-
-.pinpoint {
-    height: 20px;
-    width: 20px;
+    align-self: flex-start;
+    margin-left: 5px;
+    background-color: #36c;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header .tag-2 {
+    background-color: #4a4a4a;
+  }
+  
+  .profile-header .desc {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-header .location {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .profile-header .fb,
+  .profile-header .twitter,
+  .profile-header .instagram,
+  .profile-header .linkedin,
+  .profile-header .pinpoint {
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Event Section */
+  .container-2 {
     display: flex;
-}
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  
+  .container-2 .col-left {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-right: 2%;
+  }
+  
+  .container-2 .col-mid {
+    flex: 1;
+    margin-right: 2%;
+  }
+  
+  .container-2 .col-right {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+  
+  .event-container {
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+  
+  .event-container h4.events-h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
 
-.row-container {
-    margin-left: 250px;
-}
+  .events-h4 {
+    text-align: center;
+  }
 
-.event-container {
-    background-color: lightgray;
-    border: 1px solid black;
+  .post-h4 {
+    text-align: center;
+  }
+
+  .mt-3 {
+    text-align: center;
+  }
+  
+  .event-container > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100vw;
+  }
+  
+  .event-container > div > span {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  
+  .event-container > div > button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    background-color: #4a4a4a;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .events-list {
+    margin-top: 16px;
+  }
+  
+  .events-list h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .events-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .events-list li {
+    font-size: 12px; /* updated font size */
+    margin-bottom: 8px;
+  }
+  
+  .events-section {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .events-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+  }
+  
+  .event {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .event:last-child {
+    border-bottom: none;
+  }
+  
+  .event h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .event p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .mutual-friends img {
+    width: 40px;
+    height: 40px;
     border-radius: 20px;
-}
-
-.mutual-friends {
+  }
+  
+  .mutual-friends {
     border: 1px solid black;
     border-radius: 20px;
     width: 278px;
     height: 306px;
-    background-color: lightgrey;
-    bottom: 125px;
-}
-
-.join-btn {
-    height: 32px;
-    width: 64.93px;
-    border-radius: 8px;
-    border: 1px solid #0C4195;
-    background: #FFFFFF;
-    font-family: 'Roboto',sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-    color: #00ACFF;
-}
-
-.event-item {
-    border-bottom: 1px solid white;
-}
-
-.container h3 {
-font-family: 'Roboto', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-padding-top: 24px;
-padding-left: 83px;
-}
-
-.people_list {
-    list-style: none;
-}
-
-.host_name {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-}
-
-.description-1 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 11px;
-    line-height: 13px;
-}
-
-.description-2 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 11px;
-    line-height: 13px;
-}
-
-.description-3 {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 11px;
-    line-height: 13px;
-}
-
-.connect-btn {
-    width: 64.93px;
-    height: 32px;
-    border-radius: 8px;
-    border: 1px solid #0C4195;
-    background: #FFFFFF;
-    font-family: 'Roboto',sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-    color: #00ACFF;
-
-}
-
-.mt-profile-img {
-    width: 36.52px;
-    height: 40px;
-    border-radius: 16px;
+    background-color: #FFFFFF;
 }
 
 .mutual-friends hr {
@@ -241,62 +224,6 @@ padding-left: 83px;
     margin-left: 83px;
 } 
 
-.post-container {
-    background-color: lightgrey;
-    border-radius: 20px;
+ul.people_list {
+    list-style: none;
 }
-
-.post-img {
-    max-width: 300px;
-    max-height: 300px;
-    min-width: 200px;
-    min-height: 200px;
-    margin-top: 30px;
-    margin-bottom: 100px;
-  }
-  
-  .post-content {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-  
-    color: #000000;
-  }
-
-  .profile-picture {
-    border-radius: 80px;
-    width: 44px;
-    height: 44px;
-  }
-  
-  .username {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-  
-  
-    color: #000000;
-  }
-  
-  .title {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;  
-    line-height: 12px;  
-
-    color: rgba(0, 0, 0, 0.46);
-  }
-
-  .comment {
-    width: 518px;
-    height: 42px;
-    border-radius: 20px;
-    border: 0;
-  }
-  
