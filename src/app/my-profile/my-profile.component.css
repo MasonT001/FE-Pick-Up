@@ -2,6 +2,26 @@
     margin-left: 0;
 }
 
+.container-2 {
+    display: flex;
+    gap: 5%;
+    margin-top: 2%;
+}
+
+.col-left {
+    width: 22%;
+    position: relative;
+  }
+  
+  .col-mid {
+    width: 46%;
+  }
+  
+  .col-right {
+    width: 22%;
+    position: relative;
+  }
+
 .profile-header {
     width: 100vw;
     height: 250px;
@@ -108,12 +128,7 @@
 .event-container {
     background-color: lightgray;
     border: 1px solid black;
-    width: 33%;
     border-radius: 20px;
-}
-
-.events-h4 {
-
 }
 
 .mutual-friends {
@@ -278,31 +293,10 @@ padding-left: 83px;
     color: rgba(0, 0, 0, 0.46);
   }
 
-  .post-h4 {
-
-  }
-
   .comment {
     width: 518px;
     height: 42px;
     border-radius: 20px;
     border: 0;
-  }
-  
-  .like {
-  }
-  
-  .chat {
-
-  }
-  
-  .bookmark {
-
-  }
-
-  .btn {
-    border: none;
-    transform: translate(-50%, -50%) rotate(90deg);
-    background-color: transparent;
   }
   
