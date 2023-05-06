@@ -1,4 +1,4 @@
-<div *ngIf="user" >
+<div *ngIf="user" style="background-color: #F7F7F7;;">
     <app-navbar></app-navbar>
     <div class="profile-header">
         <img src="https://pbs.twimg.com/profile_images/1252331764653137920/uQbyrBz__400x400.jpg" alt="Profile Image"
@@ -39,8 +39,6 @@
                         <ng-template #content>
                             <span>{{event.title}}</span>
                             <span>{{event.description}}</span>
-                            <span>{{event.startDate}}</span>
-                            <span>{{event.endDate}}</span>
                             <span>{{event.location}}</span>
                             <span>{{event.spotsAvailable}}</span>
                             <button (click)="eventEditValue = i">Edit</button>
@@ -60,7 +58,7 @@
         <div class="col-right">
             <div style="position: sticky; top: 10%;">
                 <div class="mutual-friends">
-                    <h3>Mutual Friends</h3>
+                    <h3 class="mt-3">Mutual Friends</h3>
                     <ul class="people_list">
                         <li>
                             <img src="https://pbs.twimg.com/media/FepfX_OXkAEvFmZ.jpg" alt="" class="mt-profile-img">
@@ -90,3 +88,4 @@
         </div>
     </div>
 </div>
+
