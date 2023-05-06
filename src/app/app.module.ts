@@ -17,6 +17,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { StatsComponent } from './stats/stats.component';
 import { HashtagsComponent } from './hashtags/hashtags.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostComponent } from './shared/post/post.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { PostsComponent } from './posts/posts.component';
     StatsComponent,
     HashtagsComponent,
     PostsComponent,
-    
+    PostComponent
   ],
   imports: [
     BrowserModule,
