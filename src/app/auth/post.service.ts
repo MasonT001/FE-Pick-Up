@@ -28,12 +28,8 @@ export class PostService {
         'Authorization': `Bearer ${auth_token}`
       })
     }).subscribe((res: any) => {
-      console.log(res.payload.post)
-      console.log(this.currentUserPosts)
       this.currentUserPosts.push(res.payload.post)
-      console.log(this.currentUserPosts)
-     this.currentUserPostsBS.next(this.currentUserPosts)
-     console.log(this.currentUserPosts)
+      this.currentUserPostsBS.next(res.payload.post)
     })
   }
 
