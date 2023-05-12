@@ -64,6 +64,7 @@ export class MyProfileComponent implements OnInit {
       console.log(res)
       this.postCount = res.payload.length
       this.posts = res.payload
+      console.log(this.posts)
     })
   }
 
@@ -87,7 +88,6 @@ export class MyProfileComponent implements OnInit {
     }
     );
     this.postEditValue = null
-    // this.eventService.currentUserEvents[id] = new Event(editContent, editImage, id)
   }
 
   deleteEvent(id) {
