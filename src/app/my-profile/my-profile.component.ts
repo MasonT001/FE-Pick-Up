@@ -35,15 +35,26 @@ export class MyProfileComponent implements OnInit {
         }
       })
 
+
+
+      
     this.eventService.currentUserEventsBS
       .subscribe((events) => {
         this.events = events
       })
     this.events = this.eventService.currentUserEvents
+  
 
-    this.postService.currentUserPostsBS.subscribe((posts) => {
+    this.postService.currentUserPostsBS
+    .subscribe((posts) => {
       this.posts = posts
     })
+    this.posts = this.postService.currentUserPosts
+
+
+
+
+
 
     let auth_token = localStorage.getItem('tokenValue')
     this.http.get('https://pick-up-sports-api.herokuapp.com/api/v1/events/my_events', {

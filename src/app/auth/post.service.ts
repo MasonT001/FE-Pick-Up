@@ -29,7 +29,7 @@ export class PostService {
       })
     }).subscribe((res: any) => {
       this.currentUserPosts.push(res.payload.post)
-      this.currentUserPostsBS.next(res.payload.post)
+      this.currentUserPostsBS.next(this.currentUserPosts)
     })
   }
 
@@ -40,7 +40,6 @@ export class PostService {
         'Authorization': `Bearer ${auth_token}`
       })
     }).subscribe((res: any) => {
-      console.log(res)
       this.currentUserPosts = this.currentUserPosts.filter((post) => {
         return post.id !== id
       })

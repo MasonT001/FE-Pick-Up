@@ -40,11 +40,11 @@ export class HomePageComponent implements OnInit {
         console.log(this.posts)
       })
 
-    this.postService.currentUserPostsBS.subscribe((posts: any) => {
-      this.posts = posts
+    this.postService.currentUserPostsBS.subscribe((res: any) => {
+      this.posts = res
+      console.log(res)
+      console.log(this.postService.currentUserPostsBS)
     })
-    this.posts = this.postService.currentUserPosts
-    console.log(this.posts)
   }
 
 

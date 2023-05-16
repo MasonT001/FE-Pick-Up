@@ -16,7 +16,6 @@ import { PymkComponent } from './pymk/pymk.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { StatsComponent } from './stats/stats.component';
 import { HashtagsComponent } from './hashtags/hashtags.component';
-import { PostsComponent } from './posts/posts.component';
 import { PostComponent } from './shared/post/post.component';
 
 @NgModule({
@@ -33,7 +32,6 @@ import { PostComponent } from './shared/post/post.component';
     MyProfileComponent,
     StatsComponent,
     HashtagsComponent,
-    PostsComponent,
     PostComponent
   ],
   imports: [
