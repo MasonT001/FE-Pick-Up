@@ -4,7 +4,7 @@
   height: 306px;
   margin-top: 30px;
   border-radius: 16px;
-  background-color: lightgrey;
+  background-color: white;
 }
 
 .container h2 {
@@ -27,30 +27,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-}
-
-.description-1 {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.description-2 {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
-}
-
-.description-3 {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
 }
 
 .join-btn {
@@ -88,4 +64,13 @@
   line-height: 14px;
   color: #00acff;
   margin-left: 69px;
+}
+
+.people {
+  display: inline-flex;
+  column-gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 25px;
 }
