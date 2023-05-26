@@ -45,6 +45,7 @@ export class HomePageComponent implements OnInit {
       console.log(res)
       console.log(this.postService.currentUserPostsBS)
     })
+
   }
 
 
