@@ -30,6 +30,7 @@ export class PostService {
     }).subscribe((res: any) => {
       this.currentUserPosts.push(res.payload.post)
       this.currentUserPostsBS.next(this.currentUserPosts)
+      localStorage.setItem('post.id', JSON.stringify(res.payload.post))
     })
   }
 
@@ -44,6 +45,7 @@ export class PostService {
         return post.id !== id
       })
       this.currentUserPostsBS.next(this.currentUserPosts)
+      localStorage.removeItem('post.id')
     })
   }
 
